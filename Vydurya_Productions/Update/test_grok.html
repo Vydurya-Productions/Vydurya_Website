@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vydurya Productions | Next-Gen Digital Agency</title>
+    <meta name="description" content="Vydurya Productions - Pioneering web development, branding, and digital solutions with cutting-edge creativity and technology.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Orbitron', sans-serif;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #22d3ee, #a855f7);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .hero-overlay {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 100%);
+        }
+        .card-3d {
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+            transform-style: preserve-3d;
+        }
+        .card-3d:hover {
+            transform: translateZ(20px) rotateY(10deg);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        .glow {
+            box-shadow: 0 0 15px rgba(34, 211, 238, 0.5);
+        }
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        .animate-orbit {
+            animation: orbit 10s linear infinite;
+        }
+        @keyframes orbit {
+            0% { transform: rotate(0deg) translateX(50px) rotate(0deg); }
+            100% { transform: rotate(360deg) translateX(50px) rotate(-360deg); }
+        }
+        .contact-form input, .contact-form textarea {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        .contact-form input:focus, .contact-form textarea:focus {
+            border-color: #22d3ee;
+            box-shadow: 0 0 10px rgba(34, 211, 238, 0.3);
+        }
+        .portfolio-grid {
+            perspective: 1000px;
+        }
+        .animate-spin-slow {
+            animation: spin 20s linear infinite;
+        }
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-gray-900 shadow-lg sticky top-0 z-50 py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <div class="flex-shrink-0">
+                    <img src="https://via.placeholder.com/180x60?text=Vydurya+Logo" alt="Vydurya Productions" class="h-12 animate-float">
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#" class="text-white hover:text-cyan-400 font-semibold transition"><i class="fas fa-home mr-2"></i>Home</a>
+                    <a href="#services" class="text-white hover:text-cyan-400 font-semibold transition"><i class="fas fa-cogs mr-2"></i>Services</a>
+                    <a href="#portfolio" class="text-white hover:text-cyan-400 font-semibold transition"><i class="fas fa-briefcase mr-2"></i>Portfolio</a>
+                    <a href="#about" class="text-white hover:text-cyan-400 font-semibold transition"><i class="fas fa-users mr-2"></i>About</a>
+                    <a href="#contact" class="text-white hover:text-cyan-400 font-semibold transition"><i class="fas fa-envelope mr-2"></i>Contact</a>
+                    <a href="#contact" class="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-full font-semibold glow hover:scale-105 transition">Get Started</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="mobile-menu-button text-white p-2">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="mobile-menu hidden md:hidden bg-gray-800 mt-4 p-4 rounded-lg">
+                <a href="#" class="block text-white py-2"><i class="fas fa-home mr-2"></i>Home</a>
+                <a href="#services" class="block text-white py-2"><i class="fas fa-cogs mr-2"></i>Services</a>
+                <a href="#portfolio" class="block text-white py-2"><i class="fas fa-briefcase mr-2"></i>Portfolio</a>
+                <a href="#about" class="block text-white py-2"><i class="fas fa-users mr-2"></i>About</a>
+                <a href="#contact" class="block text-white py-2"><i class="fas fa-envelope mr-2"></i>Contact</a>
+                <a href="#contact" class="block bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-full mt-2">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen max-h-[900px]">
+        <div class="swiper hero-swiper h-full">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide relative">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Web Innovation" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 hero-overlay flex items-center justify-center">
+                        <div class="text-center px-6">
+                            <h1 class="text-5xl md:text-7xl font-bold mb-6">Redefine Your <span class="gradient-text">Digital Future</span></h1>
+                            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">We architect next-gen websites and digital experiences that dominate the web with innovation and style.</p>
+                            <a href="#contact" class="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-full font-semibold glow hover:scale-105 transition">Launch Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide relative">
+                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" alt="Creative Design" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 hero-overlay flex items-center justify-center">
+                        <div class="text-center px-6">
+                            <h1 class="text-5xl md:text-7xl font-bold mb-6">Master Your <span class="gradient-text">Brand Universe</span></h1>
+                            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Unleash bold identities and immersive digital strategies that captivate and convert.</p>
+                            <a href="#contact" class="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-full font-semibold glow hover:scale-105 transition">Launch Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide relative">
+                    <img src="https://images.unsplash.com/photo-1626785774573-4b7b30a880f7" alt="Web Excellence" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 hero-overlay flex items-center justify-center">
+                        <div class="text-center px-6">
+                            <h1 class="text-5xl md:text-7xl font-bold mb-6">Elevate with <span class="gradient-text">Web Mastery</span></h1>
+                            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Experience websites that blend art, technology, and performance seamlessly.</p>
+                            <a href="#contact" class="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-full font-semibold glow hover:scale-105 transition">Launch Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next text-cyan-400"></div>
+            <div class="swiper-button-prev text-cyan-400"></div>
+        </div>
+        <div class="absolute top-20 right-20 w-16 h-16 bg-cyan-500 rounded-full opacity-50 animate-orbit"></div>
+        <div class="absolute bottom-20 left-20 w-12 h-12 bg-purple-500 rounded-full opacity-50 animate-orbit"></div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 bg-gradient-to-r from-gray-900 to-indigo-900">
+        <div class="container mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div class="p-6 card-3d bg-gray-800 rounded-lg">
+                <div class="text-5xl font-bold gradient-text">300+</div>
+                <p class="text-lg mt-2">Web Projects Delivered</p>
+            </div>
+            <div class="p-6 card-3d bg-gray-800 rounded-lg">
+                <div class="text-5xl font-bold gradient-text">100+</div>
+                <p class="text-lg mt-2">Global Clients</p>
+            </div>
+            <div class="p-6 card-3d bg-gray-800 rounded-lg">
+                <div class="text-5xl font-bold gradient-text">15+</div>
+                <p class="text-lg mt-2">Years of Innovation</p>
+            </div>
+            <div class="p-6 card-3d bg-gray-800 rounded-lg">
+                <div class="text-5xl font-bold gradient-text">50+</div>
+                <p class="text-lg mt-2">Design Awards</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Our <span class="gradient-text">Core Services</span></h2>
+                <p class="text-xl max-w-3xl mx-auto">Futuristic digital solutions engineered for dominance</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 portfolio-grid">
+                <div class="card-3d bg-gray-900 rounded-xl p-8 glow">
+                    <i class="fas fa-code text-4xl text-cyan-400 mb-6 animate-spin-slow"></i>
+                    <h3 class="text-2xl font-bold mb-4">Web Development</h3>
+                    <p class="mb-6">Cutting-edge websites with 3D interactivity, blazing speed, and seamless UX.</p>
+                    <ul class="space-y-3">
+                        <li><i class="fas fa-check-circle text-cyan-400 mr-2"></i>Next-Gen Frameworks</li>
+                        <li><i class="fas fa-check-circle text-cyan-400 mr-2"></i>3D Web Experiences</li>
+                        <li><i class="fas fa-check-circle text-cyan-400 mr-2"></i>Headless CMS</li>
+                    </ul>
+                </div>
+                <div class="card-3d bg-gray-900 rounded-xl p-8 glow">
+                    <i class="fas fa-paint-brush text-4xl text-purple-400 mb-6 animate-pulse"></i>
+                    <h3 class="text-2xl font-bold mb-4">Branding</h3>
+                    <p class="mb-6">Bold, futuristic identities that leave a lasting mark.</p>
+                    <ul class="space-y-3">
+                        <li><i class="fas fa-check-circle text-purple-400 mr-2"></i>Holographic Logos</li>
+                        <li><i class="fas fa-check-circle text-purple-400 mr-2"></i>Dynamic Guidelines</li>
+                        <li><i class="fas fa-check-circle text-purple-400 mr-2"></i>Immersive Storytelling</li>
+                    </ul>
+                </div>
+                <div class="card-3d bg-gray-900 rounded-xl p-8 glow">
+                    <i class="fas fa-rocket text-4xl text-pink-400 mb-6 animate-bounce"></i>
+                    <h3 class="text-2xl font-bold mb-4">Digital Marketing</h3>
+                    <p class="mb-6">AI-driven campaigns that skyrocket your reach and ROI.</p>
+                    <ul class="space-y-3">
+                        <li><i class="fas fa-check-circle text-pink-400 mr-2"></i>SEO 3.0</li>
+                        <li><i class="fas fa-check-circle text-pink-400 mr-2"></i>AR Ad Experiences</li>
+                        <li><i class="fas fa-check-circle text-pink-400 mr-2"></i>Data Analytics</li>
+                    </ul>
+                </div>
+                <div class="card-3d bg-gray-900 rounded-xl p-8 glow">
+                    <i class="fas fa-mobile-alt text-4xl text-green-400 mb-6 animate-spin-slow"></i>
+                    <h3 class="text-2xl font-bold mb-4">UI/UX Design</h3>
+                    <p class="mb-6">Intuitive, futuristic interfaces that redefine user engagement.</p>
+                    <ul class="space-y-3">
+                        <li><i class="fas fa-check-circle text-green-400 mr-2"></i>Interactive Prototypes</li>
+                        <li><i class="fas fa-check-circle text-green-400 mr-2"></i>Motion Design</li>
+                        <li><i class="fas fa-check-circle text-green-400 mr-2"></i>User Testing</li>
+                    </ul>
+                </div>
+                <div class="card-3d bg-gray-900 rounded-xl p-8 glow">
+                    <i class="fas fa-video text-4xl text-yellow-400 mb-6 animate-pulse"></i>
+                    <h3 class="text-2xl font-bold mb-4">Video Production</h3>
+                    <p class="mb-6">Cinematic content with 3D animations and immersive visuals.</p>
+                    <ul class="space-y-3">
+                        <li><i class="fas fa-check-circle text-yellow-400 mr-2"></i>AR Videos</li>
+                        <li><i class="fas fa-check-circle text-yellow-400 mr-2"></i>Motion Graphics</li>
+                        <li><i class="fas fa-check-circle text-yellow-400 mr-2"></i>Brand Stories</li>
+                    </ul>
+                </div>
+                <div class="card-3d bg-gray-900 rounded-xl p-8 glow">
+                    <i class="fas fa-server text-4xl text-red-400 mb-6 animate-bounce"></i>
+                    <h3 class="text-2xl font-bold mb-4">Web Hosting & Support</h3>
+                    <p class="mb-6">Secure, scalable hosting with 24/7 expert support.</p>
+                    <ul class="space-y-3">
+                        <li><i class="fas fa-check-circle text-red-400 mr-2"></i>Cloud Solutions</li>
+                        <li><i class="fas fa-check-circle text-red-400 mr-2"></i>Performance Optimization</li>
+                        <li><i class="fas fa-check-circle text-red-400 mr-2"></i>Maintenance</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Showcase -->
+    <section id="portfolio" class="py-24 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Our <span class="gradient-text">Masterworks</span></h2>
+                <p class="text-xl max-w-3xl mx-auto">Witness the future of web design and digital innovation</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 portfolio-grid">
+                <div class="card-3d bg-gray-800 rounded-xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1626785774573-4b7b30a880f7" alt="E-Commerce 3D" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">3D E-Commerce Platform</h3>
+                        <p class="text-gray-400 mb-4">Interactive shopping with AR product previews and real-time customization.</p>
+                        <a href="#" class="text-cyan-400 hover:text-cyan-300"><i class="fas fa-link mr-2"></i>Explore</a>
+                    </div>
+                </div>
+                <div class="card-3d bg-gray-800 rounded-xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71" alt="Data Dashboard" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Dynamic Data Dashboard</h3>
+                        <p class="text-gray-400 mb-4">Real-time analytics with 3D visualizations and predictive insights.</p>
+                        <a href="#" class="text-cyan-400 hover:text-cyan-300"><i class="fas fa-link mr-2"></i>Explore</a>
+                    </div>
+                </div>
+                <div class="card-3d bg-gray-800 rounded-xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7" alt="Social Campaign" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Immersive Social Campaign</h3>
+                        <p class="text-gray-400 mb-4">Engaging AR filters, 360° content, and viral social strategies.</p>
+                        <a href="#" class="text-cyan-400 hover:text-cyan-300"><i class="fas fa-link mr-2"></i>Explore</a>
+                    </div>
+                </div>
+                <div class="card-3d bg-gray-800 rounded-xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1516321310768-79f0c4b6f5f5" alt="Corporate Site" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Futuristic Corporate Site</h3>
+                        <p class="text-gray-400 mb-4">Sleek design with interactive 3D elements and seamless navigation.</p>
+                        <a href="#" class="text-cyan-400 hover:text-cyan-300"><i class="fas fa-link mr-2"></i>Explore</a>
+                    </div>
+                </div>
+                <div class="card-3d bg-gray-800 rounded-xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158" alt="Tech Startup" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Tech Startup Portal</h3>
+                        <p class="text-gray-400 mb-4">Innovative web hub with AI chatbots and dynamic content.</p>
+                        <a href="#" class="text-cyan-400 hover:text-cyan-300"><i class="fas fa-link mr-2"></i>Explore</a>
+                    </div>
+                </div>
+                <div class="card-3d bg-gray-800 rounded-xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1507238699319-0d37a8b1e890" alt="Portfolio Site" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Creative Portfolio</h3>
+                        <p class="text-gray-400 mb-4">Showcase site with 3D galleries and fluid animations.</p>
+                        <a href="#" class="text-cyan-400 hover:text-cyan-300"><i class="fas fa-link mr-2"></i>Explore</a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#" class="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-full font-semibold glow hover:scale-105 transition">Discover More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-24 bg-gradient-to-b from-gray-900 to-indigo-900">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Why <span class="gradient-text">Vydurya?</span></h2>
+                <p class="text-xl max-w-3xl mx-auto">We don’t just build websites—we craft digital legacies.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card-3d bg-gray-800 rounded-xl p-8 text-center glow">
+                    <i class="fas fa-atom text-5xl text-cyan-400 mb-6 animate-spin-slow"></i>
+                    <h3 class="text-2xl font-bold mb-4">Innovative Tech</h3>
+                    <p>Leveraging AI, AR, and 3D to push boundaries and redefine possibilities.</p>
+                </div>
+                <div class="card-3d bg-gray-800 rounded-xl p-8 text-center glow">
+                    <i class="fas fa-eye text-5xl text-purple-400 mb-6 animate-pulse"></i>
+                    <h3 class="text-2xl font-bold mb-4">Visionary Design</h3>
+                    <p>Stunning aesthetics meets flawless functionality for unforgettable experiences.</p>
+                </div>
+                <div class="card-3d bg-gray-800 rounded-xl p-8 text-center glow">
+                    <i class="fas fa-trophy text-5xl text-pink-400 mb-6 animate-bounce"></i>
+                    <h3 class="text-2xl font-bold mb-4">Proven Results</h3>
+                    <p>Driving growth with measurable impact and award-winning excellence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">About <span class="gradient-text">Us</span></h2>
+                <p class="text-xl max-w-3xl mx-auto">Pioneers in web development and digital transformation</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c" alt="Team Working" class="w-full h-96 object-cover rounded-xl glow">
+                    <div class="absolute -top-10 -left-10 w-20 h-20 bg-cyan-500 rounded-full opacity-50 animate-orbit"></div>
+                </div>
+                <div>
+                    <h3 class="text-3xl font-bold mb-6 gradient-text">Who We Are</h3>
+                    <p class="mb-6">Vydurya Productions is a trailblazing digital agency with over 15 years of experience, specializing in next-generation web development, branding, and immersive digital solutions. Our mission? To catapult your business into the future with websites that aren’t just functional—they’re iconic.</p>
+                    <p class="mb-6">From 3D interactive platforms to AI-powered marketing, we fuse creativity and technology to deliver unparalleled results.</p>
+                    <a href="#contact" class="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-full font-semibold glow hover:scale-105 transition">Join the Revolution</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Let’s <span class="gradient-text">Build Together</span></h2>
+                <p class="text-xl max-w-3xl mx-auto">Your next big idea deserves a next-level execution.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+                <div class="bg-gray-800 p-8 rounded-xl glow">
+                    <h3 class="text-3xl font-bold mb-6 gradient-text">Contact Us</h3>
+                    <div class="space-y-6">
+                        <p><i class="fas fa-phone text-cyan-400 mr-3"></i>484.324.2400</p>
+                        <p><i class="fas fa-envelope text-cyan-400 mr-3"></i>info@vyduryaproductions.com</p>
+                        <p><i class="fas fa-map-marked-alt text-cyan-400 mr-3"></i>15 West 3rd St, Media, Pa. 19063</p>
+                    </div>
+                    <div class="mt-8 flex space-x-6">
+                        <a href="#" class="text-cyan-400 hover:text-cyan-300 text-2xl"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-cyan-400 hover:text-cyan-300 text-2xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-cyan-400 hover:text-cyan-300 text-2xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-cyan-400 hover:text-cyan-300 text-2xl"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form bg-gray-800 p-8 rounded-xl glow">
+                    <form class="space-y-6">
+                        <input type="text" placeholder="Name" class="w-full p-4 rounded-lg text-white focus:outline-none">
+                        <input type="email" placeholder="Email" class="w-full p-4 rounded-lg text-white focus:outline-none">
+                        <input type="tel" placeholder="Phone" class="w-full p-4 rounded-lg text-white focus:outline-none">
+                        <textarea placeholder="Your Vision" rows="5" class="w-full p-4 rounded-lg text-white focus:outline-none"></textarea>
+                        <button type="submit" class="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-4 rounded-full font-semibold glow hover:scale-105 transition">Send Signal</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold gradient-text mb-4">Vydurya Productions</h3>
+                    <p class="text-sm">Pioneering the future of web development and digital innovation.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Navigation</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-cyan-400 transition"><i class="fas fa-arrow-right mr-2"></i>Home</a></li>
+                        <li><a href="#services" class="hover:text-cyan-400 transition"><i class="fas fa-arrow-right mr-2"></i>Services</a></li>
+                        <li><a href="#portfolio" class="hover:text-cyan-400 transition"><i class="fas fa-arrow-right mr-2"></i>Portfolio</a></li>
+                        <li><a href="#about" class="hover:text-cyan-400 transition"><i class="fas fa-arrow-right mr-2"></i>About</a></li>
+                        <li><a href="#contact" class="hover:text-cyan-400 transition"><i class="fas fa-arrow-right mr-2"></i>Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Connect</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-cyan-400 transition"><i class="fab fa-twitter mr-2"></i>Twitter</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 transition"><i class="fab fa-linkedin mr-2"></i>LinkedIn</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 transition"><i class="fab fa-instagram mr-2"></i>Instagram</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Stay Updated</h3>
+                    <form class="flex">
+                        <input type="email" placeholder="Email" class="w-full p-3 bg-gray-800 rounded-l-lg text-white focus:outline-none">
+                        <button type="submit" class="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 rounded-r-lg"><i class="fas fa-rocket"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="mt-12 text-center text-sm">© 2025 Vydurya Productions. All Rights Reserved.</div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Hero Swiper
+        const heroSwiper = new Swiper('.hero-swiper', {
+            loop: true,
+            autoplay: { delay: 5000, disableOnInteraction: false },
+            pagination: { el: '.swiper-pagination', clickable: true },
+            navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+        });
+    </script>
+</body>
+</html>

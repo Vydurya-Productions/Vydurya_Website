@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vydurya Productions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .animate-scroll {
+            display: flex;
+            animation: scroll 20s linear infinite;
+        }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        /* Ensure logo stays above slider */
+        .logo-container {
+            position: relative;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <div class="relative w-full p-4">
+        <!-- Navigation with Drawer -->
+        <div class="flex justify-end mb-4">
+            <div class="relative">
+                <div class="w-6 h-6 flex flex-col justify-between cursor-pointer hamburger">
+                    <div class="w-full h-1 bg-black"></div>
+                    <div class="w-full h-1 bg-black"></div>
+                    <div class="w-full h-1 bg-black"></div>
+                </div>
+                <!-- Drawer -->
+                <div class="drawer hidden absolute right-0 top-8 w-48 bg-white shadow-lg p-4 rounded-lg">
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-blue-600">Home</a></li>
+                        <li><a href="#" class="text-blue-600">About</a></li>
+                        <li><a href="#" class="text-blue-600">Portfolio</a></li>
+                        <li><a href="#" class="text-blue-600">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Logo and Slider -->
+        <div class="relative">
+            <section class="relative h-[30vh] sm:h-[40vh] md:h-[50vh] overflow-hidden" id="heroSection">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide flex items-center justify-center">
+                            <div class="w-full h-full relative">
+                                <img src="https://img.freepik.com/free-photo/ui-ux-representations-with-laptop_23-2150201871.jpg?w=1380"
+                                    alt="Gift 1" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-black/50"></div>
+                                <div class="absolute inset-0 flex items-center justify-end text-white pr-6">
+                                    <h1 class="text-2xl font-bold">Lorem ipsum dolor sit amet.</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide flex items-center justify-center">
+                            <div class="w-full h-full relative">
+                                <img src="https://img.freepik.com/free-photo/web-template-website-design-concept_53876-125608.jpg?w=996"
+                                    alt="Gift 2" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-black/50"></div>
+                                <div class="absolute inset-0 flex items-center justify-end text-white pr-6">
+                                    <h1 class="text-2xl font-bold">Lorem ipsum dolor sit amet.</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide flex items-center justify-center">
+                            <div class="w-full h-full relative">
+                                <img src="https://img.freepik.com/free-photo/web-design_53876-167070.jpg?w=1380"
+                                    alt="Gift 3" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-black/50"></div>
+                                <div class="absolute inset-0 flex items-center justify-end text-white pr-6">
+                                    <h1 class="text-2xl font-bold">Lorem ipsum dolor sit amet.</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Logo Container with higher z-index -->
+            <div class="logo-container absolute inset-y-0 left-0 flex items-center">
+                <img src="./images/logo.png" alt="VA Logo" style="height: 750px; width: 800px;" class="object-contain">
+                <h1 class="text-white text-2xl font-semibold ml-4">SELLING IDEAS</h1>
+            </div>
+        </div>
+        
+        <!-- Footer Section -->
+        <div class="flex justify-end items-center mt-12">
+            <img src="./images/vydurya.png" alt="Vydurya Productions" class="w-49 h-20 mr-10">
+        </div>
+
+        <section  class="bg-white flex flex-col items-center p-6">
+
+  
+
+            <!-- Portfolio Title -->
+            <div class="text-white bg-[#1A2B64] px-6 py-3 rounded-t-lg text-lg font-semibold uppercase">
+                Portfolio
+            </div>
+        
+            <!-- Portfolio Grid -->
+            <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-2 w-full max-w-8xl">
+                
+                <div class="bg-gray-100 flex items-center justify-center p-6">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6wfWm4nWqI6JGpyhHuZCPPCR9uNxyxyiIrA&s" alt="Logo 1" class="max-h-48">
+                </div>
+                
+                <div class="bg-black flex items-center justify-center p-6">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4N_bR52XMr1U_vKqZ1rtsjbkWHCDcsXwddQ&s" alt="Logo 2" class="max-h-48">
+                </div>
+        
+                <div class="bg-white flex items-center justify-center p-6">
+                    <img src="https://i.pinimg.com/736x/7f/a2/a0/7fa2a0d24783138c47973310b65986d0.jpg" alt="Logo 3" class="max-h-48">
+                </div>
+        
+                <div class="bg-black flex items-center justify-center p-6">
+                    <img src="https://i.pinimg.com/736x/51/93/c0/5193c03f889705868260f02d6acca35f.jpg" alt="Logo 4" class="max-h-48">
+                </div>
+        
+                <div class="bg-white flex items-center justify-center p-6">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1jCkzwM7DOPqc_ovnXZkE4IJCrFf4b3vHMg&s" alt="Logo 5" class="max-h-48">
+                </div>
+        
+                <div class="bg-black flex items-center justify-center p-6">
+                    <img src="https://img.freepik.com/vecteurs-premium/logo-neon-du-vendredi-noir-vecteur-noir-silhouette-couleur-noire-fond-couleur-blanche_1296244-2748.jpg?semt=ais_hybrid" alt="Logo 6" class="max-h-48">
+                </div>
+        
+                <div class="bg-white flex items-center justify-center p-6">
+                    <img src="https://www.shutterstock.com/image-vector/handwritten-word-mommy-pink-heart-260nw-1651289491.jpg" alt="Logo 7" class="max-h-48">
+                </div>
+        
+                <div class="bg-black flex items-center justify-center p-6">
+                    <img src="https://dcassetcdn.com/design_img/3852105/717890/24442091/rs9wgarbe4m34swm3ywkaaskas_image.png" alt="Logo 8" class="max-h-48">
+                </div>
+        
+                <div class="bg-white flex items-center justify-center p-6">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQv0VV_OzxlOe36KxPZvUYQOIeGoZAMrITRQw&s" alt="Logo 9" class="max-h-48">
+                </div>
+        
+            </div>
+        
+            <!-- More Button -->
+            <div class="text-white bg-[#1A2B64] px-6 py-3 rounded-b-lg  text-lg font-semibold uppercase cursor-pointer">
+                More
+            </div>
+        </section>
+
+        <!-- Hero Section -->
+        <div class="bg-vein-texture w-full h-auto md:h-[400px] flex flex-col md:flex-row items-center justify-between px-6 md:px-8 py-6 md:py-0 mt-10 text-center md:text-left relative overflow-hidden">
+            <div class="hidden md:block text-2xl md:text-4xl font-bold max-w-md">
+                IN DESIGN, THINKING WRONG IS RIGHT
+            </div>
+            <div class="hidden md:block">
+                <img src="./images/logo.png" alt="Logo" class="h-[250px] md:h-[510px] object-contain">
+            </div>
+            <div class="flex flex-col md:flex-row items-center space-y-4 md:space-x-4">
+                <div class="italic text-lg max-w-md">
+                    "The man who stops advertising to save money, is like the man who stops a clock to save time." - Henry Ford
+                </div>
+                <img src="./images/ford.png" alt="Henry Ford" class="object-cover">
+            </div>
+        </div>
+
+        <style>
+            .bg-vein-texture {
+                background-color: #f9f9f9;
+                position: relative;
+                overflow: hidden;
+            }
+            .bg-vein-texture::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0.1;
+                background-image: 
+                    radial-gradient(circle at 20% 30%, transparent 0%, rgba(0,0,0,0.05) 40%, transparent 60%),
+                    radial-gradient(circle at 80% 70%, transparent 0%, rgba(0,0,0,0.05) 40%, transparent 60%),
+                    radial-gradient(ellipse at 40% 50%, transparent 0%, rgba(0,0,0,0.03) 30%, transparent 50%),
+                    radial-gradient(ellipse at 60% 20%, transparent 0%, rgba(0,0,0,0.03) 30%, transparent 50%),
+                    linear-gradient(45deg, transparent 96%, rgba(0,0,0,0.1) 97%, transparent 98%),
+                    linear-gradient(135deg, transparent 96.5%, rgba(0,0,0,0.1) 97.5%, transparent 98.5%),
+                    linear-gradient(65deg, transparent 97%, rgba(0,0,0,0.08) 98%, transparent 99%),
+                    linear-gradient(155deg, transparent 97.5%, rgba(0,0,0,0.08) 98.5%, transparent 99.5%);
+                background-size: 
+                    600px 600px,
+                    700px 700px,
+                    500px 500px,
+                    550px 550px,
+                    200px 200px,
+                    180px 180px,
+                    250px 250px,
+                    230px 230px;
+                background-position: 
+                    0 0,
+                    100% 100%,
+                    50% 50%,
+                    80% 20%,
+                    0 0,
+                    0 0,
+                    0 0,
+                    0 0;
+                z-index: 1;
+                pointer-events: none;
+            }
+            .bg-vein-texture::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-image: 
+                    linear-gradient(80deg, transparent 90%, rgba(0,0,0,0.03) 92%, transparent 94%),
+                    linear-gradient(170deg, transparent 90%, rgba(0,0,0,0.03) 92%, transparent 94%),
+                    linear-gradient(25deg, transparent 90%, rgba(0,0,0,0.03) 92%, transparent 94%),
+                    linear-gradient(115deg, transparent 90%, rgba(0,0,0,0.03) 92%, transparent 94%);
+                background-size: 
+                    300px 300px,
+                    320px 320px,
+                    350px 350px,
+                    330px 330px;
+                opacity: 0.7;
+                z-index: 1;
+                pointer-events: none;
+            }
+        </style>
+
+        <section class="bg-gray-100 flex flex-col items-center p-6">
+            <div class="bg-[#1A2B64] text-white text-xl font-semibold uppercase px-8 py-3 rounded-t-lg">
+                Solutions
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 w-full max-w-8xl">
+                <div class="flex">
+                    <img src="./Solution/brand.png" alt="Brand Identity" class="w-full h-auto object-cover">
+                </div>
+                <div class="flex">
+                    <img src="./Solution/str.png" alt="Strategy" class="w-full h-auto object-cover">
+                </div>
+                <div class="flex">
+                    <img src="./Solution/mar.png" alt="Marketing" class="w-full h-auto object-cover">
+                </div>
+                <div class="flex">
+                    <img src="./Solution/camp.png" alt="Campaigns" class="w-full h-auto object-cover">
+                </div>
+                <div class="flex">
+                    <img src="./Solution/ui ux.png" alt="UI UX" class="w-full h-auto object-cover">
+                </div>
+                <div class="flex">
+                    <img src="./Solution/cre.png" alt="Creative Concepts" class="w-full h-auto object-cover">
+                </div>
+                <div class="flex">
+                    <img src="./Solution/Ad film.png" alt="Ad Films" class="w-full h-auto object-cover">
+                </div>
+                <div class="flex">
+                    <img src="./Solution/reserch.png" alt="Research & Analysis" class="w-full h-auto object-cover">
+                </div>
+            </div>
+        </section>
+
+        <div class="mt-10">
+            <div class="flex justify-center mb-8">
+                <img src="./images/Screenshot__103_-removebg-preview.png" alt="YouTube Icon" class="h-30 w-24">
+            </div>
+            <div class="overflow-hidden w-full">
+                <div class="flex animate-scroll gap-4">
+                    <div class="min-w-[300px] h-48 rounded-lg shadow-md">
+                        <iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/embed/zOjov-2OZ0E" title="FreeCodeCamp - Python" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="min-w-[300px] h-48 rounded-lg shadow-md">
+                        <iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/embed/-MTSQjw5DrM" title="FreeCodeCamp - SQL" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="min-w-[300px] h-48 rounded-lg shadow-md">
+                        <iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/embed/8DvywoWv6fI" title="FreeCodeCamp - Data Science" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="min-w-[300px] h-48 rounded-lg shadow-md">
+                        <iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/embed/t8pPdKYpowI" title="FreeCodeCamp - Machine Learning" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="min-w-[300px] h-48 rounded-lg shadow-md">
+                        <iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/embed/zOjov-2OZ0E" title="FreeCodeCamp - Python" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="min-w-[300px] h-48 rounded-lg shadow-md">
+                        <iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/embed/-MTSQjw5DrM" title="FreeCodeCamp - SQL" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="min-w-[300px] h-48 rounded-lg shadow-md">
+                        <iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/embed/8DvywoWv6fI" title="FreeCodeCamp - Data Science" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="min-w-[300px] h-48 rounded-lg shadow-md">
+                        <iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/embed/t8pPdKYpowI" title="FreeCodeCamp - Machine Learning" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="py-16">
+            <div class="text-center">
+                <h2 class="text-3xl font-bold text-white bg-blue-900 inline-block px-6 py-2 rounded-t-lg z-30">
+                    TESTIMONIALS
+                </h2>
+            </div>
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="w-full max-w-sm mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+                                <div class="bg-[#7492AE] text-white p-6 text-center">
+                                    <p class="text-lg font-medium">
+                                        These folks are my go-to for any design or branding services. Excellent communication!
+                                    </p>
+                                </div>
+                                <div class="flex flex-col items-center p-6">
+                                    <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="User Photo" class="w-20 h-20 rounded-full border-4 border-white -mt-10 shadow-lg">
+                                    <h3 class="text-purple-700 font-bold text-lg mt-3">Anne</h3>
+                                    <p class="text-gray-600 text-sm">Technical Director</p>
+                                    <a href="#" class="text-blue-500 text-sm font-medium hover:underline">website</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="w-full max-w-sm mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+                                <div class="bg-[#7492AE] text-white p-6 text-center">
+                                    <p class="text-lg font-medium">
+                                        The company really helped with my personal branding - everything from conception to execution was
+                                    </p>
+                                </div>
+                                <div class="flex flex-col items-center p-6">
+                                    <img src="https://randomuser.me/api/portraits/women/10.jpg" alt="User Photo" class="w-20 h-20 rounded-full border-4 border-white -mt-10 shadow-lg">
+                                    <h3 class="text-purple-700 font-bold text-lg mt-3">Kari</h3>
+                                    <p class="text-gray-600 text-sm">CEO - Good Feelings Co.</p>
+                                    <a href="#" class="text-blue-500 text-sm font-medium hover:underline">website</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="w-full max-w-sm mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+                                <div class="bg-[#7492AE] text-white p-6 text-center">
+                                    <p class="text-lg font-medium">
+                                        Their design work was impeccable. I will always think of them first for any projects in the future.
+                                    </p>
+                                </div>
+                                <div class="flex flex-col items-center p-6">
+                                    <img src="https://randomuser.me/api/portraits/women/11.jpg" alt="User Photo" class="w-20 h-20 rounded-full border-4 border-white -mt-10 shadow-lg">
+                                    <h3 class="text-purple-700 font-bold text-lg mt-3">Courtney</h3>
+                                    <p class="text-gray-600 text-sm">Freelance Writer & Artist</p>
+                                    <a href="#" class="text-blue-500 text-sm font-medium hover:underline">website</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Additional slides -->
+                        <div class="swiper-slide">
+                            <div class="w-full max-w-sm mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+                                <div class="bg-[#7492AE] text-white p-6 text-center">
+                                    <p class="text-lg font-medium">
+                                        These folks are my go-to for any design or branding services. Excellent communication!
+                                    </p>
+                                </div>
+                                <div class="flex flex-col items-center p-6">
+                                    <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="User Photo" class="w-20 h-20 rounded-full border-4 border-white -mt-10 shadow-lg">
+                                    <h3 class="text-purple-700 font-bold text-lg mt-3">Anne</h3>
+                                    <p class="text-gray-600 text-sm">Technical Director</p>
+                                    <a href="#" class="text-blue-500 text-sm font-medium hover:underline">website</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="w-full max-w-sm mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+                                <div class="bg-[#7492AE] text-white p-6 text-center">
+                                    <p class="text-lg font-medium">
+                                        The company really helped with my personal branding - everything from conception to execution was amazing
+                                    </p>
+                                </div>
+                                <div class="flex flex-col items-center p-6">
+                                    <img src="https://randomuser.me/api/portraits/women/10.jpg" alt="User Photo" class="w-20 h-20 rounded-full border-4 border-white -mt-10 shadow-lg">
+                                    <h3 class="text-purple-700 font-bold text-lg mt-3">Kari</h3>
+                                    <p class="text-gray-600 text-sm">CEO - Good Feelings Co.</p>
+                                    <a href="#" class="text-blue-500 text-sm font-medium hover:underline">website</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="w-full max-w-5xl px-4 flex flex-col justify-center items-center mx-auto">
+            <div class="text-center">
+                <h2 class="text-white bg-blue-800 inline-block px-6 py-2 rounded-t-lg text-lg font-semibold uppercase z-30">Team</h2>
+            </div>
+            <div class="flex flex-col md:flex-row gap-4 justify-center items-center w-full">
+                <div class="relative bg-gradient-to-r from-teal-300 to-cyan-100 rounded-lg shadow-lg p-6 h-64 flex items-center justify-center w-full md:w-1/3">
+                    <div class="absolute inset-0 flex items-center justify-center text-6xl font-bold opacity-20">
+                        KEVIN
+                    </div>
+                </div>
+                <div class="relative bg-gradient-to-l from-gray-300 to-gray-500 rounded-lg shadow-lg p-6 h-64 flex items-center justify-center w-full md:w-1/3">
+                    <div class="absolute inset-0 flex items-center justify-center text-6xl font-bold text-center opacity-20">
+                        ZHIWEI ZHANG
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6 w-full">
+                <div class="bg-gradient-to-r from-teal-300 to-cyan-100 text-white text-center p-4 rounded-lg">
+                    <h3 class="text-xl font-bold">LEVO CHEN</h3>
+                    <p class="text-sm">Creation Partner</p>
+                    <img src="team1.jpg" alt="Levo Chen" class="w-full h-48 object-cover rounded-lg mt-2">
+                </div>
+                <div class="bg-gradient-to-l from-gray-300 to-gray-500 text-white text-center p-4 rounded-lg">
+                    <h3 class="text-xl font-bold">SITING LIN</h3>
+                    <p class="text-sm">Chief Designer</p>
+                    <img src="team2.jpg" alt="Siting Lin" class="w-full h-48 object-cover rounded-lg mt-2">
+                </div>
+                <div class="bg-gradient-to-r from-teal-300 to-cyan-100 text-white text-center p-4 rounded-lg">
+                    <h3 class="text-xl font-bold">LEVO CHEN</h3>
+                    <p class="text-sm">Creation Partner</p>
+                    <img src="team3.jpg" alt="Levo Chen" class="w-full h-48 object-cover rounded-lg mt-2">
+                </div>
+                <div class="bg-gradient-to-l from-gray-300 to-gray-500 text-white text-center p-4 rounded-lg">
+                    <h3 class="text-xl font-bold">SITING LIN</h3>
+                    <p class="text-sm">Chief Designer</p>
+                    <img src="team4.jpg" alt="Siting Lin" class="w-full h-48 object-cover rounded-lg mt-2">
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white p-8 shadow-lg rounded-lg w-full max-w-5xl flex flex-col justify-center items-center mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="p-6 bg-gray-50 rounded-lg">
+                    <h2 class="text-3xl font-bold text-gray-800">Contact Us</h2>
+                    <p class="text-gray-600 mt-2">Feel free to use the form or drop us an email. Old-fashioned phone calls work too.</p>
+                    <div class="mt-4 space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-solid fa-phone text-orange-500"></i>
+                            <p class="text-gray-700">484.324.2400</p>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-solid fa-envelope text-orange-500"></i>
+                            <p class="text-gray-700">info@mediaproper.com</p>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-solid fa-location-dot text-orange-500"></i>
+                            <p class="text-gray-700">15 West 3rd St.<br>Media, Pa. 19063</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <form class="space-y-4">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="text-gray-600">First Name</label>
+                                <input type="text" class="w-full p-2 border rounded-lg focus:outline-none focus:ring focus:ring-orange-300" placeholder="First">
+                            </div>
+                            <div>
+                                <label class="text-gray-600">Last Name</label>
+                                <input type="text" class="w-full p-2 border rounded-lg focus:outline-none focus:ring focus:ring-orange-300" placeholder="Last">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="text-gray-600">Email</label>
+                            <input type="email" class="w-full p-2 border rounded-lg focus:outline-none focus:ring focus:ring-orange-300" placeholder="example@email.com">
+                        </div>
+                        <div>
+                            <label class="text-gray-600">Phone (optional)</label>
+                            <input type="tel" class="w-full p-2 border rounded-lg focus:outline-none focus:ring focus:ring-orange-300" placeholder="xxx-xxx-xxxx">
+                        </div>
+                        <div>
+                            <label class="text-gray-600">Message</label>
+                            <textarea class="w-full p-2 border rounded-lg focus:outline-none focus:ring focus:ring-orange-300" rows="4" placeholder="Type your message ..."></textarea>
+                        </div>
+                        <button class="w-full bg-orange-500 text-white py-2 rounded-lg hover:bg-orange-600 transition">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <section class="bg-gray-900 text-gray-300 py-10">
+            <div class="container mx-auto px-6">
+                <div class="flex justify-center space-x-6 mb-8">
+                    <a href="#" class="hover:text-blue-500 transition">
+                        <i class="fa-brands fa-facebook-f text-2xl text-blue-500"></i>
+                    </a>
+                    <a href="#" class="hover:text-blue-400 transition">
+                        <i class="fa-brands fa-x-twitter text-blue-500 text-2xl"></i>
+                    </a>
+                    <a href="#" class="hover:text-pink-500 transition">
+                        <i class="fa-brands fa-instagram text-2xl text-transparent bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 bg-clip-text"></i>
+                    </a>
+                    <a href="#" class="hover:text-red-500 transition">
+                        <i class="fa-brands fa-youtube text-2xl text-red-600"></i>
+                    </a>
+                </div>
+                <div class="grid md:grid-cols-4 gap-8 text-center md:text-left">
+                    <div>
+                        <h6 class="text-lg font-semibold text-white mb-3">ABOUT US</h6>
+                        <p class="text-sm text-gray-400">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.
+                        </p>
+                    </div>
+                    <div>
+                        <h5 class="text-lg font-semibold text-white mb-3">Newsletter</h5>
+                        <form class="flex flex-col space-y-3">
+                            <input type="email" placeholder="Enter your email" class="p-2 rounded bg-gray-800 text-white">
+                            <button class="bg-red-500 text-white py-2 rounded-lg border-2 border-transparent transition duration-300 hover:border-red-600 hover:bg-transparent">
+                                Subscribe
+                            </button>
+                        </form>
+                    </div>
+                    <div>
+                        <h6 class="text-lg font-semibold text-white mb-3">NEED HELP</h6>
+                        <p class="text-sm text-gray-400">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.
+                        </p>
+                    </div>
+                    <div>
+                        <h6 class="text-lg font-semibold text-white mb-3">CONTACT US</h6>
+                        <div class="space-y-2 text-gray-400">
+                            <p><i class="fa fa-map-marker"></i> Gb road 123, USA</p>
+                            <p><i class="fa fa-phone"></i> +01 12345678901</p>
+                            <p><i class="fa fa-envelope"></i> vyduryainfo@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="mt-8 border-t border-gray-700 py-4 text-center">
+                <p class="text-gray-400 text-sm">
+                    © <span id="displayYear"></span> All Rights Reserved By
+                    <a href="https://vyduryadigital.com/" class="text-red-600 hover:text-blue-300">Vydurya Digital</a>
+                </p>
+            </footer>
+        </section>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const drawer = document.querySelector('.drawer');
+        hamburger.addEventListener('click', () => {
+            drawer.classList.toggle('hidden');
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+        // Slider for hero section
+        document.addEventListener("DOMContentLoaded", function () {
+            var heroSwiper = new Swiper(".swiper-container", {
+                loop: true,
+                autoplay: {
+                    delay: 1000,
+                    disableOnInteraction: false,
+                },
+                effect: "fade",
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+        });
+
+        // Swiper for testimonials
+        var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            spaceBetween: 20,
+            slidesPerView: 1,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                640: { slidesPerView: 1 },
+                768: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 },
+            }
+        });
+    </script>
+</body>
+</html>

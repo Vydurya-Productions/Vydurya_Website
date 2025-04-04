@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vydurya Productions | Galactic Digital Pioneers</title>
+    <meta name="description" content="Vydurya Productions - Unleashing cosmic web development, holographic branding, and interstellar digital solutions.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600;800&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <style>
+        :root {
+            --primary: #22d3ee;
+            --secondary: #a855f7;
+            --dark: #0f172a;
+            --accent: #f72585;
+            --light: #e2e8f0;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, var(--dark), #1e1b4b);
+            color: var(--light);
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Orbitron', sans-serif;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .hero-overlay {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(30, 27, 75, 0.3));
+        }
+        .card-3d {
+            transform-style: preserve-3d;
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 0 20px rgba(34, 211, 238, 0.3);
+        }
+        .card-3d:hover {
+            transform: translateZ(30px) rotateY(15deg) scale(1.05);
+            box-shadow: 0 0 40px rgba(168, 85, 247, 0.5);
+        }
+        .glow {
+            box-shadow: 0 0 25px rgba(34, 211, 238, 0.7), 0 0 50px rgba(168, 85, 247, 0.4);
+        }
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-25px); }
+        }
+        .animate-orbit {
+            animation: orbit 12s linear infinite;
+        }
+        @keyframes orbit {
+            0% { transform: rotate(0deg) translateX(60px) rotate(0deg); }
+            100% { transform: rotate(360deg) translateX(60px) rotate(-360deg); }
+        }
+        .animate-spin-slow {
+            animation: spin 25s linear infinite;
+        }
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .holo-button {
+            position: relative;
+            overflow: hidden;
+        }
+        .holo-button::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(34, 211, 238, 0.3), transparent);
+            animation: shine 3s infinite;
+        }
+        @keyframes shine {
+            0% { transform: translateX(-100%) translateY(-100%); }
+            100% { transform: translateX(100%) translateY(100%); }
+        }
+        .contact-form input, .contact-form textarea {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.4s ease;
+        }
+        .contact-form input:focus, .contact-form textarea:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 15px rgba(34, 211, 238, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-gray-900/90 glass-effect shadow-lg sticky top-0 z-50 py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <div class="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500 to-purple-600 flex items-center justify-center glow animate-spin-slow">
+                        <i class="fas fa-cube text-white text-xl"></i>
+                    </div>
+                    <span class="ml-3 text-2xl font-bold gradient-text animate-float">Vydurya</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-white hover:text-cyan-400 font-semibold transition"><i class="fas fa-home mr-2"></i>Home</a>
+                    <a href="#services" class="text-white hover:text-cyan-400 font-semibold transition"><i class="fas fa-cogs mr-2"></i>Services</a>
+                    <a href="#portfolio" class="text-white hover:text-cyan-400 font-semibold transition"><i class="fas fa-briefcase mr-2"></i>Portfolio</a>
+                    <a href="#process" class="text-white hover:text-cyan-400 font-semibold transition"><i class="fas fa-rocket mr-2"></i>Process</a>
+                    <a href="#about" class="text-white hover:text-cyan-400 font-semibold transition"><i class="fas fa-users mr-2"></i>About</a>
+                    <a href="#contact" class="holo-button bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-full font-semibold glow hover:scale-105 transition">Get Started</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="mobile-menu-button text-white p-2">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="mobile-menu hidden md:hidden bg-gray-800/95 glass-effect mt-4 p-4 rounded-lg">
+                <a href="#" class="block text-white py-2 hover:text-cyan-400"><i class="fas fa-home mr-2"></i>Home</a>
+                <a href="#services" class="block text-white py-2 hover:text-cyan-400"><i class="fas fa-cogs mr-2"></i>Services</a>
+                <a href="#portfolio" class="block text-white py-2 hover:text-cyan-400"><i class="fas fa-briefcase mr-2"></i>Portfolio</a>
+                <a href="#process" class="block text-white py-2 hover:text-cyan-400"><i class="fas fa-rocket mr-2"></i>Process</a>
+                <a href="#about" class="block text-white py-2 hover:text-cyan-400"><i class="fas fa-users mr-2"></i>About</a>
+                <a href="#contact" class="block holo-button bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-full mt-2 glow">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen max-h-[1000px] overflow-hidden">
+        <div class="swiper hero-swiper h-full">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide relative">
+                    <video autoplay muted loop class="w-full h-full object-cover">
+                        <source src="https://assets.mixkit.co/videos/preview/mixkit-digital-animation-of-a-futuristic-technological-12255-large.mp4" type="video/mp4">
+                    </video>
+                    <div class="absolute inset-0 hero-overlay flex items-center justify-center">
+                        <div class="text-center px-6 z-10">
+                            <h1 class="text-5xl md:text-8xl font-bold mb-6">Conquer the <span class="gradient-text">Digital Cosmos</span></h1>
+                            <p class="text-xl md:text-3xl mb-8 max-w-4xl mx-auto">We craft holographic web experiences that transcend reality, blending AI, 3D, and cosmic creativity.</p>
+                            <a href="#contact" class="holo-button bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-full font-semibold glow hover:scale-110 transition">Ignite Your Journey</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide relative">
+                    <video autoplay muted loop class="w-full h-full object-cover">
+                        <source src="https://assets.mixkit.co/videos/preview/mixkit-woman-coding-on-computer-5383-large.mp4" type="video/mp4">
+                    </video>
+                    <div class="absolute inset-0 hero-overlay flex items-center justify-center">
+                        <div class="text-center px-6 z-10">
+                            <h1 class="text-5xl md:text-8xl font-bold mb-6">Forge Your <span class="gradient-text">Galactic Brand</span></h1>
+                            <p class="text-xl md:text-3xl mb-8 max-w-4xl mx-auto">Unleash interdimensional identities that captivate and dominate the multiverse.</p>
+                            <a href="#contact" class="holo-button bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-full font-semibold glow hover:scale-110 transition">Launch Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next text-cyan-400"></div>
+            <div class="swiper-button-prev text-cyan-400"></div>
+        </div>
+        <div class="absolute top-10 right-10 w-20 h-20 bg-cyan-500 rounded-full opacity-50 animate-orbit glow"></div>
+        <div class="absolute bottom-20 left-20 w-16 h-16 bg-purple-500 rounded-full opacity-50 animate-orbit glow"></div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-20 bg-gradient-to-r from-gray-900 to-indigo-900 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMSIgc3Ryb2tlLW9wYWNpdHk9IjAuMiI+PHBhdGggZD0iTTAgMEg0MFY0MEgweiIvPjwvc3ZnPg==')]"></div>
+        </div>
+        <div class="container mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center relative z-10">
+            <div class="card-3d bg-gray-800/80 glass-effect rounded-xl p-8 glow">
+                <div class="text-6xl font-bold gradient-text counter" data-target="500">0</div>
+                <p class="text-lg mt-2">Cosmic Projects</p>
+            </div>
+            <div class="card-3d bg-gray-800/80 glass-effect rounded-xl p-8 glow">
+                <div class="text-6xl font-bold gradient-text counter" data-target="99">0</div>
+                <p class="text-lg mt-2">% Galactic Satisfaction</p>
+            </div>
+            <div class="card-3d bg-gray-800/80 glass-effect rounded-xl p-8 glow">
+                <div class="text-6xl font-bold gradient-text counter" data-target="20">0</div>
+                <p class="text-lg mt-2">Light-Years Ahead</p>
+            </div>
+            <div class="card-3d bg-gray-800/80 glass-effect rounded-xl p-8 glow">
+                <div class="text-6xl font-bold gradient-text counter" data-target="75">0</div>
+                <p class="text-lg mt-2">Interstellar Awards</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-gray-800 relative">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl md:text-6xl font-bold mb-4">Our <span class="gradient-text">Quantum Services</span></h2>
+                <p class="text-xl md:text-2xl max-w-4xl mx-auto">Transcend reality with interdimensional digital solutions</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div class="card-3d bg-gray-900/90 glass-effect rounded-xl p-8 glow">
+                    <i class="fas fa-code text-5xl text-cyan-400 mb-6 animate-spin-slow"></i>
+                    <h3 class="text-3xl font-bold mb-4">Holo-Web Development</h3>
+                    <p class="mb-6">Websites that bend spacetime with 3D interactivity and quantum performance.</p>
+                    <ul class="space-y-3">
+                        <li><i class="fas fa-check-circle text-cyan-400 mr-2"></i>Quantum Frameworks</li>
+                        <li><i class="fas fa-check-circle text-cyan-400 mr-2"></i>Holographic UX</li>
+                        <li><i class="fas fa-check-circle text-cyan-400 mr-2"></i>AI-Driven CMS</li>
+                    </ul>
+                </div>
+                <div class="card-3d bg-gray-900/90 glass-effect rounded-xl p-8 glow">
+                    <i class="fas fa-paint-brush text-5xl text-purple-400 mb-6 animate-pulse"></i>
+                    <h3 class="text-3xl font-bold mb-4">Nebula Branding</h3>
+                    <p class="mb-6">Cosmic identities that radiate across dimensions.</p>
+                    <ul class="space-y-3">
+                        <li><i class="fas fa-check-circle text-purple-400 mr-2"></i>Holo-Logos</li>
+                        <li><i class="fas fa-check-circle text-purple-400 mr-2"></i>Dynamic Portals</li>
+                        <li><i class="fas fa-check-circle text-purple-400 mr-2"></i>Galactic Stories</li>
+                    </ul>
+                </div>
+                <div class="card-3d bg-gray-900/90 glass-effect rounded-xl p-8 glow">
+                    <i class="fas fa-rocket text-5xl text-pink-400 mb-6 animate-bounce"></i>
+                    <h3 class="text-3xl font-bold mb-4">Stellar Marketing</h3>
+                    <p class="mb-6">AI-powered campaigns that warp speed your ROI.</p>
+                    <ul class="space-y-3">
+                        <li><i class="fas fa-check-circle text-pink-400 mr-2"></i>Quantum SEO</li>
+                        <li><i class="fas fa-check-circle text-pink-400 mr-2"></i>AR Campaigns</li>
+                        <li><i class="fas fa-check-circle text-pink-400 mr-2"></i>Data Vortex</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="absolute top-20 left-20 w-24 h-24 bg-cyan-500 rounded-full opacity-30 animate-orbit glow"></div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-24 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl md:text-6xl font-bold mb-4">Our <span class="gradient-text">Celestial Works</span></h2>
+                <p class="text-xl md:text-2xl max-w-4xl mx-auto">Explore creations that defy the laws of physics</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div class="card-3d bg-gray-800/80 glass-effect rounded-xl overflow-hidden glow">
+                    <img src="https://images.unsplash.com/photo-1626785774573-4b7b30a880f7" alt="Holo-Commerce" class="w-full h-64 object-cover transition-transform duration-700 hover:scale-110">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">Holo-Commerce Nexus</h3>
+                        <p class="text-gray-400 mb-4">A 3D shopping dimension with AR previews and quantum payments.</p>
+                        <a href="#" class="text-cyan-400 hover:text-cyan-300"><i class="fas fa-link mr-2"></i>Explore</a>
+                    </div>
+                </div>
+                <div class="card-3d bg-gray-800/80 glass-effect rounded-xl overflow-hidden glow">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71" alt="Quantum Dashboard" class="w-full h-64 object-cover transition-transform duration-700 hover:scale-110">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">Quantum Dashboard</h3>
+                        <p class="text-gray-400 mb-4">Real-time analytics with holographic visuals and AI predictions.</p>
+                        <a href="#" class="text-cyan-400 hover:text-cyan-300"><i class="fas fa-link mr-2"></i>Explore</a>
+                    </div>
+                </div>
+                <div class="card-3d bg-gray-800/80 glass-effect rounded-xl overflow-hidden glow">
+                    <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7" alt="AR Campaign" class="w-full h-64 object-cover transition-transform duration-700 hover:scale-110">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">AR Cosmic Campaign</h3>
+                        <p class="text-gray-400 mb-4">Interstellar social strategy with 360° AR experiences.</p>
+                        <a href="#" class="text-cyan-400 hover:text-cyan-300"><i class="fas fa-link mr-2"></i>Explore</a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#" class="holo-button bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-full font-semibold glow hover:scale-110 transition">Discover More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="py-24 bg-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl md:text-6xl font-bold mb-4">Our <span class="gradient-text">Quantum Process</span></h2>
+                <p class="text-xl md:text-2xl max-w-4xl mx-auto">A celestial blueprint for cosmic success</p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_isdxvjjk.json" background="transparent" speed="1" style="width: 100%; height: 400px;" loop autoplay></lottie-player>
+                </div>
+                <div class="space-y-10">
+                    <div class="relative pl-20">
+                        <div class="absolute left-0 top-0 w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-white text-2xl font-bold glow">1</div>
+                        <h3 class="text-2xl font-bold mb-3">Cosmic Discovery</h3>
+                        <p class="text-gray-400">We probe your universe to align goals with interstellar strategies.</p>
+                    </div>
+                    <div class="relative pl-20">
+                        <div class="absolute left-0 top-0 w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-white text-2xl font-bold glow">2</div>
+                        <h3 class="text-2xl font-bold mb-3">Holo-Design</h3>
+                        <p class="text-gray-400">Crafting 3D prototypes that warp reality and captivate.</p>
+                    </div>
+                    <div class="relative pl-20">
+                        <div class="absolute left-0 top-0 w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-white text-2xl font-bold glow">3</div>
+                        <h3 class="text-2xl font-bold mb-3">Quantum Build</h3>
+                        <p class="text-gray-400">Engineering solutions at lightspeed with AI precision.</p>
+                    </div>
+                    <div class="relative pl-20">
+                        <div class="absolute left-0 top-0 w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-white text-2xl font-bold glow">4</div>
+                        <h3 class="text-2xl font-bold mb-3">Stellar Launch</h3>
+                        <p class="text-gray-400">Deploying your vision with cosmic optimization.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl md:text-6xl font-bold mb-4">Why <span class="gradient-text">Vydurya?</span></h2>
+                <p class="text-xl md:text-2xl max-w-4xl mx-auto">We’re not just an agency—we’re your portal to the multiverse.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c" alt="Team" class="w-full h-96 object-cover rounded-xl glow">
+                    <div class="absolute -bottom-10 -right-10 w-24 h-24 bg-purple-500 rounded-full opacity-50 animate-orbit glow"></div>
+                </div>
+                <div>
+                    <h3 class="text-3xl font-bold mb-6 gradient-text">Our Cosmic Legacy</h3>
+                    <p class="mb-6">Vydurya Productions is a galactic force, pioneering web development and digital transformation with over 20 light-years of mastery. We fuse quantum tech, holographic design, and interstellar creativity to craft experiences that defy gravity.</p>
+                    <p class="mb-6">From wormhole websites to nebula-grade branding, we propel your vision into uncharted dimensions.</p>
+                    <a href="#contact" class="holo-button bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-full font-semibold glow hover:scale-105 transition">Join the Cosmos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-gradient-to-b from-gray-900 to-indigo-900">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl md:text-6xl font-bold mb-4">Transmit to <span class="gradient-text">Vydurya</span></h2>
+                <p class="text-xl md:text-2xl max-w-4xl mx-auto">Send us your signal—let’s warp reality together.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="card-3d bg-gray-800/90 glass-effect p-8 rounded-xl glow">
+                    <h3 class="text-3xl font-bold mb-6 gradient-text">Galactic Hub</h3>
+                    <div class="space-y-6">
+                        <p><i class="fas fa-phone text-cyan-400 mr-3"></i>484.324.2400</p>
+                        <p><i class="fas fa-envelope text-cyan-400 mr-3"></i>info@vyduryaproductions.com</p>
+                        <p><i class="fas fa-map-marked-alt text-cyan-400 mr-3"></i>15 West 3rd St, Media, PA 19063</p>
+                    </div>
+                    <div class="mt-8 flex space-x-6">
+                        <a href="#" class="text-cyan-400 hover:text-cyan-300 text-2xl animate-pulse"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-cyan-400 hover:text-cyan-300 text-2xl animate-pulse"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-cyan-400 hover:text-cyan-300 text-2xl animate-pulse"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-cyan-400 hover:text-cyan-300 text-2xl animate-pulse"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form card-3d bg-gray-800/90 glass-effect p-8 rounded-xl glow">
+                    <form class="space-y-6">
+                        <input type="text" placeholder="Your Name" class="w-full p-4 rounded-lg text-white focus:outline-none">
+                        <input type="email" placeholder="Your Email" class="w-full p-4 rounded-lg text-white focus:outline-none">
+                        <input type="tel" placeholder="Your Signal" class="w-full p-4 rounded-lg text-white focus:outline-none">
+                        <textarea placeholder="Your Cosmic Vision" rows="5" class="w-full p-4 rounded-lg text-white focus:outline-none"></textarea>
+                        <button type="submit" class="w-full holo-button bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-4 rounded-full font-semibold glow hover:scale-105 transition">Transmit Now</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div>
+                    <h3 class="text-3xl font-bold gradient-text mb-4 animate-float">Vydurya</h3>
+                    <p class="text-sm">Warping the fabric of digital reality since 2005.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Navigation</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-cyan-400 transition"><i class="fas fa-arrow-right mr-2"></i>Home</a></li>
+                        <li><a href="#services" class="hover:text-cyan-400 transition"><i class="fas fa-arrow-right mr-2"></i>Services</a></li>
+                        <li><a href="#portfolio" class="hover:text-cyan-400 transition"><i class="fas fa-arrow-right mr-2"></i>Portfolio</a></li>
+                        <li><a href="#process" class="hover:text-cyan-400 transition"><i class="fas fa-arrow-right mr-2"></i>Process</a></li>
+                        <li><a href="#about" class="hover:text-cyan-400 transition"><i class="fas fa-arrow-right mr-2"></i>About</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Connect</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-cyan-400 transition"><i class="fab fa-twitter mr-2"></i>Twitter</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 transition"><i class="fab fa-linkedin mr-2"></i>LinkedIn</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 transition"><i class="fab fa-instagram mr-2"></i>Instagram</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quantum Updates</h3>
+                    <form class="flex">
+                        <input type="email" placeholder="Your Email" class="w-full p-3 bg-gray-800 rounded-l-lg text-white focus:outline-none">
+                        <button type="submit" class="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 rounded-r-lg glow"><i class="fas fa-rocket"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="mt-12 text-center text-sm">© 2025 Vydurya Productions. All Dimensions Reserved.</div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Hero Swiper
+        const heroSwiper = new Swiper('.hero-swiper', {
+            loop: true,
+            autoplay: { delay: 8000, disableOnInteraction: false },
+            effect: 'fade',
+            fadeEffect: { crossFade: true },
+            pagination: { el: '.swiper-pagination', clickable: true },
+            navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+        });
+
+        // Counter Animation
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200;
+
+        function animateCounter(counter) {
+            const target = +counter.getAttribute('data-target');
+            const count = +counter.innerText;
+            const increment = target / speed;
+
+            if (count < target) {
+                counter.innerText = Math.ceil(count + increment);
+                setTimeout(() => animateCounter(counter), 1);
+            } else {
+                counter.innerText = target;
+            }
+        }
+
+        function startCountersWhenVisible() {
+            counters.forEach(counter => {
+                const counterPosition = counter.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+
+                if (counterPosition < screenPosition) {
+                    animateCounter(counter);
+                }
+            });
+        }
+
+        startCountersWhenVisible();
+        window.addEventListener('scroll', startCountersWhenVisible);
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

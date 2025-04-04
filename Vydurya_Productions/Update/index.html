@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vydurya Productions | Index</title>
+    <meta name="description" content="Vydurya Productions - Explore our collection of next-gen digital solutions and pages.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Orbitron', sans-serif;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #22d3ee, #a855f7);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .card-3d {
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+            transform-style: preserve-3d;
+        }
+        .card-3d:hover {
+            transform: translateZ(20px) rotateY(10deg);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        .glow {
+            box-shadow: 0 0 15px rgba(34, 211, 238, 0.5);
+        }
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        .animate-orbit {
+            animation: orbit 10s linear infinite;
+        }
+        @keyframes orbit {
+            0% { transform: rotate(0deg) translateX(50px) rotate(0deg); }
+            100% { transform: rotate(360deg) translateX(50px) rotate(-360deg); }
+        }
+        .btn-gradient {
+            background: linear-gradient(90deg, #22d3ee, #a855f7);
+            transition: transform 0.3s ease;
+        }
+        .btn-gradient:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-gray-900 shadow-lg sticky top-0 z-50 py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <div class="flex-shrink-0">
+                    <img src="https://via.placeholder.com/180x60?text=Vydurya+Logo" alt="Vydurya Productions" class="h-12 animate-float">
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#" class="text-white hover:text-cyan-400 font-semibold transition"><i class="fas fa-home mr-2"></i>Home</a>
+                    <a href="#pages" class="text-white hover:text-cyan-400 font-semibold transition"><i class="fas fa-folder-open mr-2"></i>Pages</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="mobile-menu-button text-white p-2">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="mobile-menu hidden md:hidden bg-gray-800 mt-4 p-4 rounded-lg">
+                <a href="#" class="block text-white py-2"><i class="fas fa-home mr-2"></i>Home</a>
+                <a href="#pages" class="block text-white py-2"><i class="fas fa-folder-open mr-2"></i>Pages</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center">
+        <div class="absolute inset-0 bg-gradient-to-b from-gray-900 to-indigo-900"></div>
+        <div class="text-center px-6 z-10">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6">Welcome to <span class="gradient-text">Vydurya</span></h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Explore our collection of cutting-edge digital pages and solutions.</p>
+            <a href="#pages" class="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-full font-semibold glow hover:scale-105 transition">Dive In</a>
+        </div>
+        <div class="absolute top-20 right-20 w-16 h-16 bg-cyan-500 rounded-full opacity-50 animate-orbit"></div>
+        <div class="absolute bottom-20 left-20 w-12 h-12 bg-purple-500 rounded-full opacity-50 animate-orbit"></div>
+    </section>
+
+    <!-- Pages Section -->
+    <section id="pages" class="py-24 bg-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Explore Our <span class="gradient-text">Pages</span></h2>
+                <p class="text-xl max-w-3xl mx-auto">Navigate through our innovative digital experiences</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <a href="../test2.html" class="card-3d bg-gray-900 rounded-xl p-6 glow text-center btn-gradient">
+                    <h3 class="text-2xl font-bold text-white">Test 1</h3>
+                </a>
+                <a href="../test1.html" class="card-3d bg-gray-900 rounded-xl p-6 glow text-center btn-gradient">
+                    <h3 class="text-2xl font-bold text-white">Test 2</h3>
+                </a>
+                <a href="./new.html" class="card-3d bg-gray-900 rounded-xl p-6 glow text-center btn-gradient">
+                    <h3 class="text-2xl font-bold text-white">Test 3</h3>
+                </a>
+                <a href="./new1.html" class="card-3d bg-gray-900 rounded-xl p-6 glow text-center btn-gradient">
+                    <h3 class="text-2xl font-bold text-white">Test 4</h3>
+                </a>
+                <a href="./new2.html" class="card-3d bg-gray-900 rounded-xl p-6 glow text-center btn-gradient">
+                    <h3 class="text-2xl font-bold text-white">Test 5</h3>
+                </a>
+                <a href="./test_deepseek.html" class="card-3d bg-gray-900 rounded-xl p-6 glow text-center btn-gradient">
+                    <h3 class="text-2xl font-bold text-white">Test 6</h3>
+                </a>
+                <a href="./new3.html" class="card-3d bg-gray-900 rounded-xl p-6 glow text-center btn-gradient">
+                    <h3 class="text-2xl font-bold text-white">Test 7</h3>
+                </a>
+                <a href="./test_grok.html" class="card-3d bg-gray-900 rounded-xl p-6 glow text-center btn-gradient">
+                    <h3 class="text-2xl font-bold text-white">Test 8</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-12">
+        <div class="container mx-auto px-6">
+            <div class="text-center">
+                <h3 class="text-2xl font-bold gradient-text mb-4">Vydurya Productions</h3>
+                <p class="text-sm mb-4">Pioneering the future of web development and digital innovation.</p>
+                <div class="mt-8 text-sm">© 2025 Vydurya Productions. All Rights Reserved.</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

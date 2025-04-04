@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vydurya | Neo-Digital Experience Architects</title>
+    <meta name="description" content="Vydurya crafts impossible digital experiences that defy conventional design with quantum-inspired interfaces and holographic branding.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@500;700&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --quantum-blue: #00f7ff;
+            --neon-purple: #b300ff;
+            --hologram-pink: #ff00f7;
+            --cyber-green: #00ff9d;
+            --dark-matter: #0b0b20;
+            --void-black: #050510;
+            --star-white: #f0f5ff;
+        }
+        body {
+            font-family: 'Exo 2', sans-serif;
+            background: var(--void-black);
+            color: var(--star-white);
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Orbitron', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, var(--quantum-blue), var(--neon-purple), var(--hologram-pink));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            background-size: 300% 300%;
+            animation: gradientFlow 8s ease infinite;
+        }
+        @keyframes gradientFlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .quantum-card {
+            background: rgba(15, 15, 35, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 247, 255, 0.1);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transform-style: preserve-3d;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        .quantum-card:hover {
+            transform: translateZ(30px) rotateY(5deg);
+            box-shadow: 0 20px 50px rgba(0, 247, 255, 0.2);
+            border-color: rgba(0, 247, 255, 0.3);
+        }
+        .holographic-border {
+            position: relative;
+            overflow: hidden;
+        }
+        .holographic-border::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, 
+                var(--quantum-blue), 
+                var(--neon-purple), 
+                var(--hologram-pink),
+                var(--cyber-green));
+            background-size: 300% 300%;
+            animation: gradientFlow 4s ease infinite;
+        }
+        .particle-network {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 0;
+            background-image: radial-gradient(
+                circle at center,
+                rgba(0, 247, 255, 0.03) 0%,
+                transparent 70%
+            );
+        }
+        .cyber-button {
+            background: linear-gradient(45deg, var(--quantum-blue), var(--neon-purple));
+            color: var(--void-black);
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border: none;
+            overflow: hidden;
+            position: relative;
+            transition: all 0.4s ease;
+            box-shadow: 0 0 15px rgba(0, 247, 255, 0.5);
+        }
+        .cyber-button:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 0 30px rgba(179, 0, 255, 0.7);
+        }
+        .cyber-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, 
+                transparent, 
+                rgba(255, 255, 255, 0.2), 
+                transparent);
+            transition: all 0.5s ease;
+        }
+        .cyber-button:hover::before {
+            left: 100%;
+        }
+        .floating {
+            animation: floating 6s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        .pulse {
+            animation: pulse 3s ease infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 20px;
+        }
+        .tech-icon {
+            filter: drop-shadow(0 0 5px rgba(0, 247, 255, 0.7));
+            transition: all 0.3s ease;
+        }
+        .tech-icon:hover {
+            transform: scale(1.2);
+            filter: drop-shadow(0 0 15px rgba(179, 0, 255, 0.9));
+        }
+        .service-card {
+            background: linear-gradient(145deg, rgba(11, 11, 32, 0.8), rgba(5, 5, 16, 0.9));
+            border: 1px solid rgba(0, 247, 255, 0.1);
+            transition: all 0.4s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--quantum-blue);
+            box-shadow: 0 20px 40px rgba(0, 247, 255, 0.15);
+        }
+        .testimonial-card {
+            background: linear-gradient(135deg, rgba(15, 15, 35, 0.8), rgba(11, 11, 32, 0.9));
+            border-left: 4px solid var(--quantum-blue);
+        }
+        .glow-text {
+            text-shadow: 0 0 10px rgba(0, 247, 255, 0.7);
+        }
+        .matrix-fall {
+            position: absolute;
+            color: var(--cyber-green);
+            font-family: monospace;
+            opacity: 0.7;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body class="relative">
+    <!-- Matrix Background Animation -->
+    <div id="matrixCanvas" class="fixed inset-0 -z-10 opacity-10"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-black/80 backdrop-blur-md z-50 border-b border-gray-800/50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <div class="w-12 h-12 rounded-full bg-gradient-to-br from-cyan-500 to-purple-600 flex items-center justify-center mr-3 pulse">
+                        <i class="fas fa-atom text-white text-xl"></i>
+                    </div>
+                    <span class="text-2xl font-bold gradient-text">VYDURYA</span>
+                </div>
+                <div class="hidden lg:flex items-center space-x-10">
+                    <a href="#" class="text-white hover:text-cyan-400 transition-all duration-300 group">
+                        <span class="group-hover:glow-text">Home</span>
+                        <div class="h-0.5 bg-gradient-to-r from-cyan-500 to-purple-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
+                    </a>
+                    <a href="#services" class="text-white hover:text-cyan-400 transition-all duration-300 group">
+                        <span class="group-hover:glow-text">Services</span>
+                        <div class="h-0.5 bg-gradient-to-r from-cyan-500 to-purple-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
+                    </a>
+                    <a href="#portfolio" class="text-white hover:text-cyan-400 transition-all duration-300 group">
+                        <span class="group-hover:glow-text">Portfolio</span>
+                        <div class="h-0.5 bg-gradient-to-r from-cyan-500 to-purple-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
+                    </a>
+                    <a href="#about" class="text-white hover:text-cyan-400 transition-all duration-300 group">
+                        <span class="group-hover:glow-text">About</span>
+                        <div class="h-0.5 bg-gradient-to-r from-cyan-500 to-purple-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
+                    </a>
+                    <a href="#contact" class="text-white hover:text-cyan-400 transition-all duration-300 group">
+                        <span class="group-hover:glow-text">Contact</span>
+                        <div class="h-0.5 bg-gradient-to-r from-cyan-500 to-purple-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
+                    </a>
+                    <a href="#contact" class="cyber-button px-6 py-3 rounded-full">
+                        <span>Start Project</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="lg:hidden">
+                    <button class="mobile-menu-button text-white p-2">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu hidden lg:hidden bg-black/95 backdrop-blur-lg border-t border-gray-800/50">
+            <div class="container mx-auto px-6 py-4">
+                <a href="#" class="block text-white py-3 border-b border-gray-800 hover:text-cyan-400 transition"><i class="fas fa-home mr-3"></i>Home</a>
+                <a href="#services" class="block text-white py-3 border-b border-gray-800 hover:text-cyan-400 transition"><i class="fas fa-cogs mr-3"></i>Services</a>
+                <a href="#portfolio" class="block text-white py-3 border-b border-gray-800 hover:text-cyan-400 transition"><i class="fas fa-briefcase mr-3"></i>Portfolio</a>
+                <a href="#about" class="block text-white py-3 border-b border-gray-800 hover:text-cyan-400 transition"><i class="fas fa-users mr-3"></i>About</a>
+                <a href="#contact" class="block text-white py-3 border-b border-gray-800 hover:text-cyan-400 transition"><i class="fas fa-envelope mr-3"></i>Contact</a>
+                <a href="#contact" class="block cyber-button text-center mt-4 py-3 rounded-full">
+                    <span>Start Project</span>
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen pt-32 pb-20 flex items-center overflow-hidden">
+        <div class="particle-network"></div>
+        <div class="absolute top-0 left-0 w-full h-full z-0">
+            <video autoplay muted loop class="w-full h-full object-cover opacity-30">
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-digital-animation-of-a-futuristic-technological-12255-large.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                        <span class="gradient-text">Quantum Leap</span> Your Digital Presence
+                    </h1>
+                    <p class="text-xl md:text-2xl mb-8 text-gray-300 max-w-2xl">
+                        We architect impossible digital experiences that transcend conventional design with holographic interfaces, AI-powered interactions, and quantum-inspired visuals.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#contact" class="cyber-button px-8 py-4 rounded-full text-lg">
+                            <span>Begin Transformation</span>
+                            <i class="fas fa-arrow-right ml-3"></i>
+                        </a>
+                        <a href="#portfolio" class="px-8 py-4 rounded-full border border-cyan-400/30 text-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 text-lg">
+                            <span>Explore Our Universe</span>
+                            <i class="fas fa-eye ml-3"></i>
+                        </a>
+                    </div>
+                    <div class="mt-12 flex items-center space-x-6">
+                        <div class="flex -space-x-3">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client" class="w-12 h-12 rounded-full border-2 border-cyan-400">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client" class="w-12 h-12 rounded-full border-2 border-purple-500">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Client" class="w-12 h-12 rounded-full border-2 border-pink-500">
+                        </div>
+                        <div>
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                            </div>
+                            <p class="text-sm text-gray-400">Trusted by 150+ visionary brands</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="quantum-card rounded-2xl p-1 glow">
+                        <div class="bg-gray-900/80 rounded-xl p-6">
+                            <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_isdxvjjk.json" background="transparent" speed="1" style="width: 100%; height: 400px;" loop autoplay></lottie-player>
+                        </div>
+                    </div>
+                    <div class="absolute -top-10 -left-10 w-24 h-24 bg-cyan-500/20 rounded-full blur-xl"></div>
+                    <div class="absolute -bottom-10 -right-10 w-32 h-32 bg-purple-500/20 rounded-full blur-xl"></div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-0 right-0 flex justify-center z-10">
+            <a href="#services" class="text-cyan-400 animate-bounce">
+                <i class="fas fa-chevron-down text-2xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section class="py-16 bg-black/50 backdrop-blur-sm border-y border-gray-800/50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h3 class="text-sm uppercase tracking-widest text-cyan-400 mb-2">Collaborating With Visionaries</h3>
+                <div class="w-20 h-1 bg-gradient-to-r from-cyan-500 to-purple-600 mx-auto rounded-full"></div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center">
+                <div class="flex justify-center">
+                    <img src="https://via.placeholder.com/150x60?text=QuantumX" alt="QuantumX" class="h-10 opacity-80 hover:opacity-100 hover:filter hover:drop-shadow(0 0 10px rgba(0, 247, 255, 0.7)) transition-all duration-300">
+                </div>
+                <div class="flex justify-center">
+                    <img src="https://via.placeholder.com/150x60?text=NeonCorp" alt="NeonCorp" class="h-10 opacity-80 hover:opacity-100 hover:filter hover:drop-shadow(0 0 10px rgba(179, 0, 255, 0.7)) transition-all duration-300">
+                </div>
+                <div class="flex justify-center">
+                    <img src="https://via.placeholder.com/150x60?text=HoloTech" alt="HoloTech" class="h-10 opacity-80 hover:opacity-100 hover:filter hover:drop-shadow(0 0 10px rgba(255, 0, 247, 0.7)) transition-all duration-300">
+                </div>
+                <div class="flex justify-center">
+                    <img src="https://via.placeholder.com/150x60?text=CyberNova" alt="CyberNova" class="h-10 opacity-80 hover:opacity-100 hover:filter hover:drop-shadow(0 0 10px rgba(0, 255, 157, 0.7)) transition-all duration-300">
+                </div>
+                <div class="flex justify-center">
+                    <img src="https://via.placeholder.com/150x60?text=FutureDyne" alt="FutureDyne" class="h-10 opacity-80 hover:opacity-100 hover:filter hover:drop-shadow(0 0 10px rgba(0, 247, 255, 0.7)) transition-all duration-300">
+                </div>
+                <div class="flex justify-center">
+                    <img src="https://via.placeholder.com/150x60?text=OmniVerse" alt="OmniVerse" class="h-10 opacity-80 hover:opacity-100 hover:filter hover:drop-shadow(0 0 10px rgba(179, 0, 255, 0.7)) transition-all duration-300">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 relative overflow-hidden">
+        <div class="particle-network"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-6xl font-bold mb-6">
+                    <span class="gradient-text">Beyond Reality</span> Services
+                </h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    We don't just build websites - we engineer digital experiences that exist at the intersection of art and advanced technology.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card rounded-xl overflow-hidden group">
+                    <div class="p-8">
+                        <div class="w-20 h-20 rounded-2xl bg-cyan-500/10 flex items-center justify-center mb-6 group-hover:bg-cyan-500/20 transition-all duration-500 border border-cyan-500/20 group-hover:border-cyan-500/40">
+                            <i class="fas fa-globe text-3xl text-cyan-400 group-hover:text-cyan-300 transition-all duration-500"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Holographic Web Design</h3>
+                        <p class="text-gray-400 mb-6">Websites that project 3D holograms directly from the screen, creating impossible spatial interactions.</p>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center">
+                                <div class="w-6 h-6 rounded-full bg-cyan-500/20 flex items-center justify-center mr-3">
+                                    <i class="fas fa-check text-cyan-400 text-xs"></i>
+                                </div>
+                                <span class="text-gray-300">Volumetric UI Components</span>
+                            </li>
+                            <li class="flex items-center">
+                                <div class="w-6 h-6 rounded-full bg-cyan-500/20 flex items-center justify-center mr-3">
+                                    <i class="fas fa-check text-cyan-400 text-xs"></i>
+                                </div>
+                                <span class="text-gray-300">Depth-Aware Navigation</span>
+                            </li>
+                            <li class="flex items-center">
+                                <div class="w-6 h-6 rounded-full bg-cyan-500/20 flex items-center justify-center mr-3">
+                                    <i class="fas fa-check text-cyan-400 text-xs"></i>
+                                </div>
+                                <span class="text-gray-300">Spatial Content Organization</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="inline-flex items-center text-cyan-400 font-medium group-hover:text-cyan-300 transition-all duration-300">
+                            <span>Explore Possibilities</span>
+                            <i class="fas fa-arrow-right ml-2 transition-transform duration-300 group-hover:translate-x-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card rounded-xl overflow-hidden group">
+                    <div class="p-8">
+                        <div class="w-20 h-20 rounded-2xl bg-purple-500/10 flex items-center justify-center mb-6 group-hover:bg-purple-500/20 transition-all duration-500 border border-purple-500/20 group-hover:border-purple-500/40">
+                            <i class="fas fa-brain text-3xl text-purple-400 group-hover:text-purple-300 transition-all duration-500"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Neural Branding</h3>
+                        <p class="text-gray-400 mb-6">Brand identities that adapt to viewer emotions using AI and biometric feedback in real-time.</p>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center">
+                                <div class="w-6 h-6 rounded-full bg-purple-500/20 flex items-center justify-center mr-3">
+                                    <i class="fas fa-check text-purple-400 text-xs"></i>
+                                </div>
+                                <span class="text-gray-300">Emotion-Responsive Logos</span>
+                            </li>
+                            <li class="flex items-center">
+                                <div class="w-6 h-6 rounded-full bg-purple-500/20 flex items-center justify-center mr-3">
+                                    <i class="fas fa-check text-purple-400 text-xs"></i>
+                                </div>
+                                <span class="text-gray-300">Dynamic Identity Systems</span>
+                            </li>
+                            <li class="flex items-center">
+                                <div class="w-6 h-6 rounded-full bg-purple-500/20 flex items-center justify-center mr-3">
+                                    <i class="fas fa-check text-purple-400 text-xs"></i>
+                                </div>
+                                <span class="text-gray-300">Neuro-Marketing Integration</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="inline-flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-all duration-300">
+                            <span>Redefine Identity</span>
+                            <i class="fas fa-arrow-right ml-2 transition-transform duration-300 group-hover:translate-x-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card rounded-xl overflow-hidden group">
+                    <div class="p-8">
+                        <div class="w-20 h-20 rounded-2xl bg-pink-500/10 flex items-center justify-center mb-6 group-hover:bg-pink-500/20 transition-all duration-500 border border-pink-500/20 group-hover:border-pink-500/40">
+                            <i class="fas fa-robot text-3xl text-pink-400 group-hover:text-pink-300 transition-all duration-500"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">AI Experience Design</h3>
+                        <p class="text-gray-400 mb-6">Digital experiences that evolve and personalize themselves using quantum machine learning algorithms.</p>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center">
+                                <div class="w-6 h-6 rounded-full bg-pink-500/20 flex items-center justify-center mr-3">
+                                    <i class="fas fa-check text-pink-400 text-xs"></i>
+                                </div>
+                                <span class="text-gray-300">Self-Learning Interfaces</span>
+                            </li>
+                            <li class="flex items-center">
+                                <div class="w-6 h-6 rounded-full bg-pink-500/20 flex items-center justify-center mr-3">
+                                    <i class="fas fa-check text-pink-400 text-xs"></i>
+                                </div>
+                                <span class="text-gray-300">Predictive Content Delivery</span>
+                            </li>
+                            <li class="flex items-center">
+                                <div class="w-6 h-6 rounded-full bg-pink-500/20 flex items-center justify-center mr-3">
+                                    <i class="fas fa-check text-pink-400 text-xs"></i>
+                                </div>
+                                <span class="text-gray-300">Neural Navigation Systems</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="inline-flex items-center text-pink-400 font-medium group-hover:text-pink-300 transition-all duration-300">
+                            <span>Experience the Future</span>
+                            <i class="fas fa-arrow-right ml-2 transition-transform duration-300 group-hover:translate-x-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card rounded-xl overflow-hidden group">
+                    <div class="p-8">
+                        <div class="w-20 h-20 rounded-2xl bg-green-500/10 flex items-center justify-center mb-6 group-hover:bg-green-500/20 transition-all duration-500 border border-green-500/20 group-hover:border-green-500/40">
+                            <i class="fas fa-vr-cardboard text-3xl text-green-400 group-hover:text-green-300 transition-all duration-500"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Metaverse Integration</h3>
+                        <p class="text-gray-400 mb-6">Seamless bridges between physical reality and virtual worlds with zero-latency transitions.</p>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center">
+                                <div class="w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center mr-3">
+                                    <i class="fas fa-check text-green-400 text-xs"></i>
+                                </div>
+                                <span class="text-gray-300">Cross-Reality Commerce</span>
+                            </li>
+                            <li class="flex items-center">
+                                <div class="w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center mr-3">
+                                    <i class="fas fa-check text-green-400 text-xs"></i>
+                                </div>
+                                <span class="text-gray-300">Digital Twin Creation</span>
+                            </li>
+                            <li class="flex items-center">
+                                <div class="w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center mr-3">
+                                    <i class="fas fa-check text-green-400 text-xs"></i>
+                                </div>
+                                <span class="text-gray-300">Haptic Feedback Systems</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="inline-flex items-center text-green-400 font-medium group-hover:text-green-300 transition-all duration-300">
+                            <span>Enter the Metaverse</span>
+                            <i class="fas fa-arrow-right ml-2 transition-transform duration-300 group-hover:translate-x-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-card rounded-xl overflow-hidden group">
+                    <div class="p-8">
+                        <div class="w-20 h-20 rounded-2xl bg-yellow-500/10 flex items-center justify-center mb-6 group-hover:bg-yellow-500/20 transition-all duration-500 border border-yellow-500/20 group-hover:border-yellow-500/40">
+                            <i class="fas fa-bolt text-3xl text-yellow-400 group-hover:text-yellow-300 transition-all duration-500"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Quantum Marketing</h3>
+                        <p class="text-gray-400 mb-6">Campaigns that exist in superposition, simultaneously targeting all possible audience segments.</p>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center">
+                                <div class="w-6 h-6 rounded-full bg-yellow-500/20 flex items-center justify-center mr-3">
+                                    <i class="fas fa-check text-yellow-400 text-xs"></i>
+                                </div>
+                                <span class="text-gray-300">Multiverse A/B Testing</span>
+                            </li>
+                            <li class="flex items-center">
+                                <div class="w-6 h-6 rounded-full bg-yellow-500/20 flex items-center justify-center mr-3">
+                                    <i class="fas fa-check text-yellow-400 text-xs"></i>
+                                </div>
+                                <span class="text-gray-300">Temporal Optimization</span>
+                            </li>
+                            <li class="flex items-center">
+                                <div class="w-6 h-6 rounded-full bg-yellow-500/20 flex items-center justify-center mr-3">
+                                    <i class="fas fa-check text-yellow-400 text-xs"></i>
+                                </div>
+                                <span class="text-gray-300">Entangled Analytics</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="inline-flex items-center text-yellow-400 font-medium group-hover:text-yellow-300 transition-all duration-300">
+                            <span>Amplify Reach</span>
+                            <i class="fas fa-arrow-right ml-2 transition-transform duration-300 group-hover:translate-x-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="service-card rounded-xl overflow-hidden group">
+                    <div class="p-8">
+                        <div class="w-20 h-20 rounded-2xl bg-red-500/10 flex items-center justify-center mb-6 group-hover:bg-red-500/20 transition-all duration-500 border border-red-500/20 group-hover:border-red-500/40">
+                            <i class="fas fa-infinity text-3xl text-red-400 group-hover:text-red-300 transition-all duration-500"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Omnichannel Presence</h3>
+                        <p class="text-gray-400 mb-6">Brand experiences that maintain perfect coherence across all dimensions and platforms.</p>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center">
+                                <div class="w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center mr-3">
+                                    <i class="fas fa-check text-red-400 text-xs"></i>
+                                </div>
+                                <span class="text-gray-300">5D Content Strategy</span>
+                            </li>
+                            <li class="flex items-center">
+                                <div class="w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center mr-3">
+                                    <i class="fas fa-check text-red-400 text-xs"></i>
+                                </div>
+                                <span class="text-gray-300">Reality-Sync Deployment</span>
+                            </li>
+                            <li class="flex items-center">
+                                <div class="w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center mr-3">
+                                    <i class="fas fa-check text-red-400 text-xs"></i>
+                                </div>
+                                <span class="text-gray-300">Cross-Dimensional SEO</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="inline-flex items-center text-red-400 font-medium group-hover:text-red-300 transition-all duration-300">
+                            <span>Unify Your Presence</span>
+                            <i class="fas fa-arrow-right ml-2 transition-transform duration-300 group-hover:translate-x-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section class="py-24 bg-gradient-to-b from-black/80 to-gray-900/80 relative overflow-hidden">
+        <div class="particle-network"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-6xl font-bold mb-6">
+                    <span class="gradient-text">Quantum-Powered</span> Technology
+                </h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    We harness bleeding-edge technologies that don't yet exist in conventional development.
+                </p>
+            </div>
+            
+            <div class="tech-grid">
+                <div class="flex flex-col items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" class="tech-icon h-16" alt="React" />
+                    <span class="text-xs mt-2 text-gray-400">REACT 4D</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/threejs/threejs-original-wordmark.svg" class="tech-icon h-16" alt="Three.js" />
+                    <span class="text-xs mt-2 text-gray-400">THREE.JS XR</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg" class="tech-icon h-16" alt="Node.js" />
+                    <span class="text-xs mt-2 text-gray-400">NODE.Q</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webgl/webgl-original.svg" class="tech-icon h-16" alt="WebGL" />
+                    <span class="text-xs mt-2 text-gray-400">WEBGL 3.0</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aframe/aframe-original-wordmark.svg" class="tech-icon h-16" alt="A-Frame" />
+                    <span class="text-xs mt-2 text-gray-400">A-FRAME X</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original-wordmark.svg" class="tech-icon h-16" alt="TensorFlow" />
+                    <span class="text-xs mt-2 text-gray-400">TENSORFLOW Q</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original-wordmark.svg" class="tech-icon h-16" alt="Blender" />
+                    <span class="text-xs mt-2 text-gray-400">BLENDER 4D</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original-wordmark.svg" class="tech-icon h-16" alt="Unity" />
+                    <span class="text-xs mt-2 text-gray-400">UNITY META</span>
+                </div>
+            </div>
+
+            <div class="mt-20 text-center">
+                <div class="inline-block quantum-card rounded-full px-8 py-4">
+                    <p class="text-lg font-medium">
+                        <span class="text-cyan-400">Specialized in:</span> 
+                        <span class="text-gray-300">Quantum CSS · Holographic JS · Neural APIs · 5D Rendering</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-24 relative overflow-hidden">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-6xl font-bold mb-6">
+                    <span class="gradient-text">Defying Reality</span> Projects
+                </h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    Our portfolio exists in multiple dimensions simultaneously. Here are a few projections into your reality.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="quantum-card rounded-xl overflow-hidden group h-full">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1639762681057-408e52192e55?q=80&w=2232&auto=format&fit=crop" 
+                             alt="Quantum Interface" 
+                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+                            <div>
+                                <h3 class="text-2xl font-bold text-white mb-2">Neural Nexus</h3>
+                                <p class="text-gray-300">Mind-controlled interface for quantum computing</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 rounded-full text-xs bg-cyan-500/10 text-cyan-400">Holographic UI</span>
+                            <span class="px-3 py-1 rounded-full text-xs bg-purple-500/10 text-purple-400">Neural Networks</span>
+                            <span class="px-3 py-1 rounded-full text-xs bg-pink-500/10 text-pink-400">Quantum AI</span>
+                        </div>
+                        <p class="text-gray-400 mb-6">Created a brain-computer interface that allows users to manipulate quantum data streams using only neural impulses.</p>
+                        <a href="#" class="inline-flex items-center text-cyan-400 font-medium group-hover:text-cyan-300 transition-all duration-300">
+                            <span>View Case Study</span>
+                            <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="quantum-card rounded-xl overflow-hidden group h-full">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=2340&auto=format&fit=crop" 
+                             alt="Metaverse Platform" 
+                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+                            <div>
+                                <h3 class="text-2xl font-bold text-white mb-2">OmniVerse Portal</h3>
+                                <p class="text-gray-300">Cross-dimensional metaverse gateway</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 rounded-full text-xs bg-green-500/10 text-green-400">Metaverse</span>
+                            <span class="px-3 py-1 rounded-full text-xs bg-yellow-500/10 text-yellow-400">Web3</span>
+                            <span class="px-3 py-1 rounded-full text-xs bg-purple-500/10 text-purple-400">NFT</span>
+                        </div>
+                        <p class="text-gray-400 mb-6">Engineered a portal that maintains persistent identity and assets across 11 different metaverse platforms.</p>
+                        <a href="#" class="inline-flex items-center text-green-400 font-medium group-hover:text-green-300 transition-all duration-300">
+                            <span>Enter the Portal</span>
+                            <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="quantum-card rounded-xl overflow-hidden group h-full">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1639762681057-408e52192e55?q=80&w=2232&auto=format&fit=crop" 
+                             alt="AI Branding" 
+                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+                            <div>
+                                <h3 class="text-2xl font-bold text-white mb-2">NeuroBrand AI</h3>
+                                <p class="text-gray-300">Self-evolving brand identity system</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 rounded-full text-xs bg-pink-500/10 text-pink-400">Generative AI</span>
+                            <span class="px-3 py-1 rounded-full text-xs bg-red-500/10 text-red-400">Dynamic Branding</span>
+                            <span class="px-3 py-1 rounded-full text-xs bg-blue-500/10 text-blue-400">Emotion Detection</span>
+                        </div>
+                        <p class="text-gray-400 mb-6">Developed a brand system that adapts its visual language in real-time based on viewer biometrics and environmental factors.</p>
+                        <a href="#" class="inline-flex items-center text-pink-400 font-medium group-hover:text-pink-300 transition-all duration-300">
+                            <span>See It Transform</span>
+                            <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-16">
+                <a href="#" class="cyber-button px-8 py-4 rounded-full text-lg inline-flex items-center">
+                    <span>Explore All Dimensions</span>
+                    <i class="fas fa-arrow-right ml-3"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-24 bg-gradient-to-b from-gray-900/80 to-black/80 relative overflow-hidden">
+        <div class="particle-network"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-6xl font-bold mb-6">
+                    <span class="gradient-text">Beyond Satisfied</span> Clients
+                </h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    Our clients experience results that transcend conventional metrics of success.
+                </p>
+            </div>
+
+            <div class="swiper testimonialSwiper">
+                <div class="swiper-wrapper pb-12">
+                    <!-- Testimonial 1 -->
+                    <div class="swiper-slide">
+                        <div class="testimonial-card rounded-xl p-8 h-full">
+                            <div class="flex items-center mb-6">
+                                <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Client" class="w-16 h-16 rounded-full border-2 border-cyan-400/50 mr-4">
+                                <div>
+                                    <h4 class="text-xl font-bold text-white">Dr. Elara Voss</h4>
+                                    <p class="text-cyan-400">CEO, QuantumX</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-300 italic mb-6">"Vydurya didn't just build us a website - they created a quantum portal that increased our investor engagement by 11,000%. Their holographic interface defies all known UX conventions yet feels perfectly intuitive."</p>
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="swiper-slide">
+                        <div class="testimonial-card rounded-xl p-8 h-full">
+                            <div class="flex items-center mb-6">
+                                <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Client" class="w-16 h-16 rounded-full border-2 border-purple-400/50 mr-4">
+                                <div>
+                                    <h4 class="text-xl font-bold text-white">Kiran Patel</h4>
+                                    <p class="text-purple-400">CTO, NeuroDyne</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-300 italic mb-6">"The AI experience architecture Vydurya implemented learns faster than our R&D team. It predicted market trends 3 months before they emerged. This isn't technology - it's precognition."</p>
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="swiper-slide">
+                        <div class="testimonial-card rounded-xl p-8 h-full">
+                            <div class="flex items-center mb-6">
+                                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Client" class="w-16 h-16 rounded-full border-2 border-pink-400/50 mr-4">
+                                <div>
+                                    <h4 class="text-xl font-bold text-white">Maya Zhang</h4>
+                                    <p class="text-pink-400">CDO, HoloTech</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-300 italic mb-6">"Our brand identity now exists in 7 dimensions simultaneously thanks to Vydurya. The neural branding system responds to cultural shifts before they happen. It's like having a time machine for marketing."</p>
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 4 -->
+                    <div class="swiper-slide">
+                        <div class="testimonial-card rounded-xl p-8 h-full">
+                            <div class="flex items-center mb-6">
+                                <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Client" class="w-16 h-16 rounded-full border-2 border-green-400/50 mr-4">
+                                <div>
+                                    <h4 class="text-xl font-bold text-white">David Koreski</h4>
+                                    <p class="text-green-400">CEO, FutureDyne</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-300 italic mb-6">"Vydurya's metaverse integration increased our virtual real estate value by 4,200% in 3 weeks. Their cross-dimensional SEO strategy gets us traffic from alternate timelines. Literally."</p>
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 relative overflow-hidden">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="relative">
+                    <div class="quantum-card rounded-2xl overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?q=80&w=2127&auto=format&fit=crop" 
+                             alt="Vydurya Team" 
+                             class="w-full h-auto object-cover">
+                    </div>
+                    <div class="absolute -bottom-10 -right-10 w-64 h-64 bg-gradient-to-br from-cyan-500/20 to-purple-600/20 rounded-full blur-3xl -z-10"></div>
+                </div>
+                <div>
+                    <h2 class="text-4xl md:text-6xl font-bold mb-8">
+                        <span class="gradient-text">We Are</span> Vydurya
+                    </h2>
+                    <p class="text-xl text-gray-400 mb-8">
+                        A collective of digital reality architects, quantum interface designers, and neural experience engineers. We operate at the event horizon where technology becomes magic.
+                    </p>
+                    <div class="space-y-6 mb-10">
+                        <div class="flex">
+                            <div class="mr-6">
+                                <div class="w-14 h-14 rounded-xl bg-cyan-500/10 flex items-center justify-center text-cyan-400 text-2xl">
+                                    <i class="fas fa-atom"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white mb-2">Quantum Design Principles</h3>
+                                <p class="text-gray-400">Our interfaces exist in superposition, simultaneously in all possible states until observed by the user.</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="mr-6">
+                                <div class="w-14 h-14 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-400 text-2xl">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white mb-2">Neural Experience Mapping</h3>
+                                <p class="text-gray-400">We design with EEG headsets, mapping user neural pathways to create instinctive interfaces.</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="mr-6">
+                                <div class="w-14 h-14 rounded-xl bg-pink-500/10 flex items-center justify-center text-pink-400 text-2xl">
+                                    <i class="fas fa-infinity"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white mb-2">Temporal Optimization</h3>
+                                <p class="text-gray-400">Our solutions are optimized not just for current users, but for all their possible future selves simultaneously.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#contact" class="cyber-button px-8 py-4 rounded-full inline-flex items-center">
+                        <span>Join the Future</span>
+                        <i class="fas fa-arrow-right ml-3"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-gradient-to-b from-black/80 to-gray-900/80 relative overflow-hidden">
+        <div class="particle-network"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-6xl font-bold mb-6">
+                    <span class="gradient-text">Initiate</span> Contact
+                </h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    Our quantum communication channels are open across all dimensions.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <div>
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-gray-400 mb-2">Your Name</label>
+                                <input type="text" id="name" class="w-full bg-gray-900/70 border border-gray-700/50 rounded-xl px-6 py-4 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-transparent transition-all" placeholder="Enter your name">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-400 mb-2">Your Email</label>
+                                <input type="email" id="email" class="w-full bg-gray-900/70 border border-gray-700/50 rounded-xl px-6 py-4 text-white focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-transparent transition-all" placeholder="Enter your email">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-gray-400 mb-2">Subject</label>
+                            <input type="text" id="subject" class="w-full bg-gray-900/70 border border-gray-700/50 rounded-xl px-6 py-4 text-white focus:outline-none focus:ring-2 focus:ring-pink-500/50 focus:border-transparent transition-all" placeholder="What's this about?">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-400 mb-2">Your Message</label>
+                            <textarea id="message" rows="5" class="w-full bg-gray-900/70 border border-gray-700/50 rounded-xl px-6 py-4 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-transparent transition-all" placeholder="Describe your quantum leap..."></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" class="cyber-button w-full py-4 rounded-full text-lg">
+                                <span>Transmit Message</span>
+                                <i class="fas fa-paper-plane ml-3"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div>
+                    <div class="quantum-card rounded-2xl p-8 h-full">
+                        <h3 class="text-2xl font-bold text-white mb-8">Quantum Connection Points</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="mr-6">
+                                    <div class="w-14 h-14 rounded-xl bg-cyan-500/10 flex items-center justify-center text-cyan-400 text-2xl">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-white mb-1">Email</h4>
+                                    <a href="mailto:contact@vydurya.tech" class="text-cyan-400 hover:text-cyan-300 transition">contact@vydurya.tech</a>
+                                    <p class="text-gray-400 text-sm mt-1">Response in 4.2 quantum minutes</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="mr-6">
+                                    <div class="w-14 h-14 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-400 text-2xl">
+                                        <i class="fas fa-phone-alt"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-white mb-1">Telephone</h4>
+                                    <a href="tel:+18005551234" class="text-purple-400 hover:text-purple-300 transition">+1 (800) 555-1234</a>
+                                    <p class="text-gray-400 text-sm mt-1">Available across 11 time dimensions</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="mr-6">
+                                    <div class="w-14 h-14 rounded-xl bg-pink-500/10 flex items-center justify-center text-pink-400 text-2xl">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-white mb-1">Physical Coordinates</h4>
+                                    <p class="text-pink-400">Quantum Tower, Floor 42</p>
+                                    <p class="text-pink-400">San Francisco, CA 94107</p>
+                                    <p class="text-gray-400 text-sm mt-1">(By appointment only - our office exists in quantum flux)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-12 pt-8 border-t border-gray-800/50">
+                            <h4 class="text-lg font-bold text-white mb-4">Connect Across Dimensions</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-12 h-12 rounded-full bg-gray-900/70 border border-gray-700/50 flex items-center justify-center text-xl text-cyan-400 hover:bg-cyan-500/20 hover:border-cyan-500/30 transition-all">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="w-12 h-12 rounded-full bg-gray-900/70 border border-gray-700/50 flex items-center justify-center text-xl text-purple-400 hover:bg-purple-500/20 hover:border-purple-500/30 transition-all">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="w-12 h-12 rounded-full bg-gray-900/70 border border-gray-700/50 flex items-center justify-center text-xl text-pink-400 hover:bg-pink-500/20 hover:border-pink-500/30 transition-all">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="w-12 h-12 rounded-full bg-gray-900/70 border border-gray-700/50 flex items-center justify-center text-xl text-green-400 hover:bg-green-500/20 hover:border-green-500/30 transition-all">
+                                    <i class="fab fa-discord"></i>
+                                </a>
+                                <a href="#" class="w-12 h-12 rounded-full bg-gray-900/70 border border-gray-700/50 flex items-center justify-center text-xl text-blue-400 hover:bg-blue-500/20 hover:border-blue-500/30 transition-all">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-black/90 backdrop-blur-md border-t border-gray-800/50">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-cyan-500 to-purple-600 flex items-center justify-center mr-3">
+                            <i class="fas fa-atom text-white text-sm"></i>
+                        </div>
+                        <span class="text-xl font-bold gradient-text">VYDURYA</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">Architects of impossible digital experiences that transcend conventional reality.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-cyan-400 transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-purple-400 transition"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-pink-400 transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-green-400 transition"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-6">Explore</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition">Quantum Web</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition">Holographic UI</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition">Neural Branding</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition">Metaverse Portals</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition">AI Experiences</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-6">Resources</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition">Quantum Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition">Case Studies</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition">Research Papers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition">Developer Portal</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition">API Documentation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-6">Legal</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-pink-400 transition">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-400 transition">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-400 transition">Quantum Ethics</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-400 transition">Dimensional Compliance</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-400 transition">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800/50 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm mb-4 md:mb-0">© 2023 Vydurya Technologies. All rights reserved across all dimensions.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-500 hover:text-cyan-400 transition text-sm">Privacy Portal</a>
+                    <a href="#" class="text-gray-500 hover:text-cyan-400 transition text-sm">Terms of Existence</a>
+                    <a href="#" class="text-gray-500 hover:text-cyan-400 transition text-sm">Dimensional Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Initialize Swiper
+        const testimonialSwiper = new Swiper('.testimonialSwiper', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                }
+            }
+        });
+
+        // Matrix Background
+        const canvas = document.getElementById('matrixCanvas');
+        const ctx = canvas.getContext('2d');
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const katakana = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン';
+        const latin = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        const nums = '0123456789';
+        const symbols = '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~';
+
+        const alphabet = katakana + latin + nums + symbols;
+
+        const fontSize = 16;
+        const columns = canvas.width / fontSize;
+
+        const rainDrops = [];
+
+        for (let x = 0; x < columns; x++) {
+            rainDrops[x] = 1;
+        }
+
+        const draw = () => {
+            ctx.fillStyle = 'rgba(5, 5, 16, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            ctx.fillStyle = '#00ff9d';
+            ctx.font = fontSize + 'px monospace';
+
+            for (let i = 0; i < rainDrops.length; i++) {
+                const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+                ctx.fillText(text, i * fontSize, rainDrops[i] * fontSize);
+                
+                if (rainDrops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    rainDrops[i] = 0;
+                }
+                rainDrops[i]++;
+            }
+        };
+
+        setInterval(draw, 30);
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Window resize handler
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+    </script>
+</body>
+</html>
